@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainComponent } from './main/main.component';
 import { HelloComponent } from './new-module/hello/hello.component';
+import { OneWayBindingComponent } from './one-way-binding/one-way-binding.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HelloComponent } from './new-module/hello/hello.component';
     HeaderComponent,
     SidebarComponent,
     MainComponent,
-    HelloComponent
+    HelloComponent,
+    OneWayBindingComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
