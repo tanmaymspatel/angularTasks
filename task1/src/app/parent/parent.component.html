@@ -1,5 +1,8 @@
+
+<h2>parent-child communication</h2>
 <div class="parentComponent">
         <h3>Parent component</h3>
+        <h5>Child to parent</h5>
         <p>Hello : {{childData}}</p>
 
         <app-child (notify)="parentMethod($event)" [childValue] = "parentValue"></app-child>
