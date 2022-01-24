@@ -13,6 +13,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 import { StructuralComponent } from './directives/structural/structural.component';
+import { AttributeComponent } from './directives/attribute/attribute.component';
+import { FirstCapitalPipe } from './first-capital.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { StructuralComponent } from './directives/structural/structural.componen
     ParentComponent,
     ChildComponent,
     TwoWayComponent,
-    StructuralComponent
+    StructuralComponent,
+    AttributeComponent,
+    FirstCapitalPipe
   ],
   imports: [
     BrowserModule,

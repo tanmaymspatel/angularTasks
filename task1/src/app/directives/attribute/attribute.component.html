@@ -1,0 +1,25 @@
+<div class="attributeDirectiveComponent">
+    <div class="container">
+        <h2 [ngStyle]="{'color':'blue'}">Attribute Directives with pipes</h2>
+        <table style="width: 1000px; text-align: left;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th style="width:100px" [ngClass]="'colorRed'">Name</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let data of listData; index as i">
+                    <td>{{i+1}}</td>
+                    <td >{{data.Name}}</td>
+                    <td>{{data.Product|uppercase}}</td>
+                    <td>{{data.Price|currency:'INR'}}</td>
+                    <td>{{data.description|firstCapital}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
