@@ -6,6 +6,7 @@ input, textarea, select{
 }
 .mainContent {
     display: flex;
+    justify-content: space-around;
 }
 .registrationForm {
     margin-left: 100px;
