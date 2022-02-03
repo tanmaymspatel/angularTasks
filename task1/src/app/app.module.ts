@@ -15,6 +15,7 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import { StructuralComponent } from './directives/structural/structural.component';
 import { AttributeComponent } from './directives/attribute/attribute.component';
 import { FirstCapitalPipe } from './first-capital.pipe';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FirstCapitalPipe } from './first-capital.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

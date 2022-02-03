@@ -6,6 +6,7 @@ import { MainComponent } from './main/main.component';
 import { OneWayBindingComponent } from './one-way-binding/one-way-binding.component';
 import { ParentComponent } from './parent/parent.component';
 import { TwoWayComponent } from './two-way/two-way.component';
+import { ListComponent } from './user/list/list.component';
 
 const routes: Routes = [
   {path : 'form', component : MainComponent},
@@ -14,6 +15,11 @@ const routes: Routes = [
   {path : 'parentChildCommunication', component : ParentComponent},
   {path : 'structuratDirectives', component : StructuralComponent},
   {path : 'attributrDirectives', component : AttributeComponent},
+  // {path : 'reactiveForm', component : ListComponent},
+  {
+    path: 'list',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+  }
 ];
 
 @NgModule({
