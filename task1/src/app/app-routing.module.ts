@@ -9,13 +9,13 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import { ListComponent } from './user/list/list.component';
 
 const routes: Routes = [
+  {path : '', component : MainComponent},
   {path : 'form', component : MainComponent},
   {path : 'onewayBinding', component : OneWayBindingComponent},
   {path : 'twowayBinding', component : TwoWayComponent},
   {path : 'parentChildCommunication', component : ParentComponent},
   {path : 'structuratDirectives', component : StructuralComponent},
   {path : 'attributrDirectives', component : AttributeComponent},
-  // {path : 'reactiveForm', component : ListComponent},
   {
     path: 'list',
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)

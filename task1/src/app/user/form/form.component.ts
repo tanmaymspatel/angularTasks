@@ -7,32 +7,34 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-
   userForm = {} as FormGroup;
- 
-
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.userForm = this.buildUserForm();
-    
   }
-
   buildUserForm() : FormGroup{
-   return this.fb.group({
-      firstName:['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
-      lastName:['', Validators.required],
-      email:[null, [Validators.minLength(7),Validators.maxLength(12),Validators.email]],
-      phoneNumber:[null, Validators.required],
-      gender:[],
-      department:[],
-      dateOfEmployement:[]
+    return this.fb.group({
+      firstName: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
+      lastName: ['', Validators.required],
+      email: [null, [Validators.minLength(7), Validators.maxLength(12), Validators.email]],
+      phoneNumber: [null, Validators.required],
+      gender: [],
+      department: [],
+      dateOfEmployement: []
     })
   }
-  saveUserData(){
-    console.log(this.userForm);
+  resetForm(){
+    this.userForm.reset();
   }
-  get getValue(){
-    return this.userForm['controls'];
-  }
+ saveData(){
+  console.log(this.userForm)
 }
+ 
+}
+
+
+// saveUserData(){
+//   console.log(this.userForm);
+// }
+
