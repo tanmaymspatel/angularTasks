@@ -6,11 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any, searchTerm : any): any {
-    if(value.lenght === 0 ){
+    if(value.lenght === 0 || value === undefined){
       return value;
     }else {
       return value.filter(function(search : any){
-        return search.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        return search.firstName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
       });
     }
   }
