@@ -1,0 +1,16 @@
+.usersList {
+    margin-top: 3rem;
+}
+table, tr, td {
+    border: 1px solid black;
+}
+thead {
+    background-color: black;
+    color: white;
+}
+th, td {
+    padding: 1rem 0.4rem;
+}
+tbody tr:nth-child(even) {
+    background: aquamarine;
+}

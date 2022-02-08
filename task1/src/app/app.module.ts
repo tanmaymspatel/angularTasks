@@ -15,6 +15,7 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import { StructuralComponent } from './directives/structural/structural.component';
 import { AttributeComponent } from './directives/attribute/attribute.component';
 import { FirstCapitalPipe } from './first-capital.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,11 +32,13 @@ import { FirstCapitalPipe } from './first-capital.pipe';
     StructuralComponent,
     AttributeComponent,
     FirstCapitalPipe
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
  
   ],
   providers: [],

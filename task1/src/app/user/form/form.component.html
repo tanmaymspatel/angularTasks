@@ -33,7 +33,8 @@
         <div class="department formRow">
             <label for="department">Choose your department: </label>
             <select id="department" name="department" formControlName="department">
-                <option value="select" selected>Select Department</option>
+                <option [value]="0" disabled>Open this select menu</option>
+                <option *ngFor="let cat of categoryOptions" [value]="cat.id">{{cat.name}}</option>
             </select>
         </div>
         <div class="dateOfEmployement formRow">

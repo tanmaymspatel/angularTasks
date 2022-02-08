@@ -1,2 +1,38 @@
-<input type="search" name="search" id="search">
-<button routerLink="add">Add</button>
+<div class="headerArea">
+    <input type="search" name="search" id="search" placeholder="Search Here">
+    <button routerLink="add">Add</button>
+</div>
+
+<div class="usersList">
+    <table>
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Email id</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Date of Employment</th>
+                <th colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users, let i = index">
+                <td>{{i+1}}</td>
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phoneNumber}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.department}}</td>
+                <td>{{user.dateOfEmployement }}</td>
+                <td><button (click)="editClick(user.id)">Edit</button></td>
+                <td><button (click)="deleteClick(user.id)">Delete</button></td>
+            </tr>
+           
+        </tbody>
+    </table>
+    <div class="BackToList">
+        <button routerLink="/list">Back To List</button>
+    </div>
+</div>

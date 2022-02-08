@@ -12,6 +12,9 @@ const routes: Routes = [
       },
       {
         path : 'add' , component : FormComponent,
+      },
+      {
+        path : 'edit/:id' , component : FormComponent,
       }
     ]
   }
