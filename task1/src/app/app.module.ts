@@ -33,12 +33,13 @@ import { HttpClientModule } from '@angular/common/http';
     AttributeComponent,
     FirstCapitalPipe
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
  
   ],
   providers: [],

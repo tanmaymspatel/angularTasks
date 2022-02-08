@@ -7,6 +7,7 @@ import { UserComponent } from './user.component';
 import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserComponent,
     ListComponent,
     FormComponent,
+    FilterPipe,
     
   ],
   imports: [

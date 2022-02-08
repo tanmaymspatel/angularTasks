@@ -13,7 +13,7 @@ import { ProductService } from '../services/product.service';
 export class FormComponent implements OnInit {
 
   categoryOptions!: Category[];
-  userToEdit: number;
+  userToEdit!: number;
 
   userForm = {} as FormGroup;
   constructor(private fb: FormBuilder, private productService: ProductService, private router: Router, private activatedRoute: ActivatedRoute) { }

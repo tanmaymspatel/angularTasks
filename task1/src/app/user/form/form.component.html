@@ -34,7 +34,7 @@
             <label for="department">Choose your department: </label>
             <select id="department" name="department" formControlName="department">
                 <option [value]="0" disabled>Open this select menu</option>
-                <option *ngFor="let cat of categoryOptions" [value]="cat.id">{{cat.name}}</option>
+                <option *ngFor="let category of categoryOptions" [value]="category.id">{{category.name}}</option>
             </select>
         </div>
         <div class="dateOfEmployement formRow">
@@ -46,6 +46,9 @@
             <button type="button" class="btn" (click)="resetForm()">Reset</button>
         </div>
     </form>
+    <div class="BackToList">
+        <button routerLink="/list">Back To List</button>
+    </div>
 </div>
 
 

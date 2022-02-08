@@ -11,6 +11,7 @@ import { Router, Routes } from '@angular/router';
 export class ListComponent implements OnInit {
 
   users: user[] =[];
+  nameSearch : any = "";
 
 
   constructor(private productService: ProductService, private router : Router) { }
