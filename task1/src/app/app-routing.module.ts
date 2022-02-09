@@ -6,7 +6,7 @@ import { MainComponent } from './main/main.component';
 import { OneWayBindingComponent } from './one-way-binding/one-way-binding.component';
 import { ParentComponent } from './parent/parent.component';
 import { TwoWayComponent } from './two-way/two-way.component';
-import { ListComponent } from './user/list/list.component';
+// import { ListComponent } from './user/list/list.component';
 
 const routes: Routes = [
   {path : '', component : MainComponent},
@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+  },
+  {
+    path: 'resume-form',
+    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
   }
 ];
 

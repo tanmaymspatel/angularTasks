@@ -1,0 +1,56 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "UI"
+    },
+    {
+      "id": 2,
+      "name": "Frontend"
+    },
+    {
+      "id": 3,
+      "name": "Backend"
+    },
+    {
+      "id": 4,
+      "name": "App Developer"
+    },
+    {
+      "id": 5,
+      "name": "Tester"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Tanmay",
+      "lastName": "Patel",
+      "email": "tanmay.1rivet@gmail.com",
+      "phoneNumber": "8128569394",
+      "gender": "Male",
+      "department": "2",
+      "dateOfEmployement": "2022-02-22",
+      "id": 1
+    },
+    {
+      "firstName": "Sushil",
+      "lastName": "Modi",
+      "email": "shusi@gmail.com",
+      "phoneNumber": "9825707023",
+      "gender": "Male",
+      "department": "4",
+      "dateOfEmployement": "2022-02-25",
+      "id": 3
+    },
+    {
+      "firstName": "Ankit",
+      "lastName": "Modi",
+      "email": "shusi@gmail.com",
+      "phoneNumber": "9825707023",
+      "gender": "Male",
+      "department": "2",
+      "dateOfEmployement": "2022-02-24",
+      "id": 4
+    }
+  ]
+}

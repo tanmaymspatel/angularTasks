@@ -1,0 +1,118 @@
+<div class="resumeformcomponent">
+    <h2>Resume Form</h2>
+    <div class="resumeform">
+        <form [formGroup]="resumeForm">
+            <!-- name -->
+            <div class="formElement resumeFullname">
+                <div>
+                    <label for="fullName">Enter Your Full Name:</label>
+                </div>
+                <div>
+                    <input type="text" name="fullName" formControlName="fullName" id="fullName">
+                </div>
+                <!-- <div *ngIf="resumeForm.get('fullName')!.touched && resumeForm.get('fullName')!.errors?.['required']">
+                    <small class="error-text">Enter valid name </small>
+                </div> -->
+            </div>
+            <!-- designation -->
+            <div class="formElement resumeDesignation">
+                <div>
+                    <label for="designation">Enter Your Designation:</label>
+                </div>
+                <div>
+                    <input type="text" name="designation" formControlName="designation" id="designation">
+                </div>
+            </div>
+            <!-- email -->
+            <div class="formElement resumeEmail">
+                <div>
+                    <label for="email">Enter Your Email Address:</label>
+                </div>
+                <div>
+                    <input type="emali" name="email" formControlName="email" id="email">
+                </div>
+            </div>
+            <!-- phone number -->
+            <div class="formElement resumePhoneNumber">
+                <div>
+                    <label for="phoneNumber">Enter Your Phone Number:</label>
+                </div>
+                <div>
+                    <input type="tel" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber">
+                </div>
+            </div>
+            <!-- profile -->
+            <div class="formElement resumeProfile">
+                <div>
+                    <label for="profile">Enter Your Profile:</label>
+                </div>
+                <div>
+                    <input type="text" name="profile" formControlName="profile" id="profile">
+                </div>
+            </div>
+            <!-- Skills  -->
+            <div class="formElement resumeSkills">
+                <div><label for="skills">Skills:</label>
+                <button type="button" class="btn" (click)="addSkills()">Add</button></div>
+                <div formArrayName="skills">
+                    <div  *ngFor=" let skill of getSkillsArray().controls; let i = index">
+                        <div  [formGroupName]="i">
+                            <input type="text" formControlName="skillName" placeholder="Skill Name">
+                            <input type="text" formControlName="skillDescription" placeholder="Skill Description">
+                            <button (click)="deleteSkills(i)">delete</button>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+            <!-- Technical Skills  -->
+            <div class="formElement resumeTechnicalSkills">
+                <div><label for="techSkills">Technical Skills:</label>
+                <button type="button" class="btn" (click)="addTechSkills()">Add</button></div>
+                <div formArrayName="technicalSkills">
+                    <div  *ngFor=" let skill of getTechSkillsArray().controls; let i = index">
+                        <div  [formGroupName]="i">
+                            <input type="text" formControlName="techSkillName" placeholder="Technical Skill">
+                            <button  (click)="deleteTechSkills(i)">delete</button>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+            <!-- Experience -->
+            <div class="formElement resumeTechnicalSkills">
+                <div><label for="experience">Experience:</label>
+                <button type="button" class="btn" (click)="addExperience()">Add</button></div>
+                <div formArrayName="experience">
+                    <div  *ngFor=" let skill of getExperienceArray().controls; let i = index">
+                        <div  [formGroupName]="i">
+                            <input type="text" formControlName="CompanyName" placeholder="Company Name">
+                            <input type="text" formControlName="jobPosition" placeholder="Designation">
+                            <input type="text" formControlName="jobDescription" placeholder="Job Description">
+                            <input type="number" formControlName="jobDurationStart" placeholder="Starting Year">
+                            <input type="number" formControlName="jobDurationEnd" placeholder="Leaving Year">
+                            <button (click)="deleteExperience(i)">delete</button>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+            <!-- Education -->
+            <div class="formElement resumeTechnicalSkills">
+                <div><label for="education">Education:</label>
+                <button type="button" class="btn" (click)="addEducation()">Add</button></div>
+                <div formArrayName="education">
+                    <div  *ngFor=" let skill of getEducationArray().controls; let i = index">
+                        <div  [formGroupName]="i">
+                            <input type="text" formControlName="instituteName" placeholder="Institute Name">
+                            <input type="text" formControlName="degreeName" placeholder="Degree Name">
+                            <input type="number" formControlName="cgpa" placeholder="CGPA">
+                            <button (click)="deleteEducation(i)">delete</button>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+            <!-- submit button -->
+            <div class="formElement submit">
+                <input type="submit" value="Submit" [disabled]="!resumeForm.valid" (click)="showResumeData()">
+            </div>
+        </form>
+    </div>
+</div>

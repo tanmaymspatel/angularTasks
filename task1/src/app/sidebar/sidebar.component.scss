@@ -1,11 +1,21 @@
-aside ul{
+#mainSidebar {
+    background: #f4f4f4;
+    margin-right: 6rem;
+}
+#mainSidebar ul{
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding-inline-start: 0;
+    padding: 0.5rem 1rem;
 }
-aside{
-margin-right: 5rem;
-}
-a{
+
+
+#mainSidebar nav a {
     text-decoration: none;
+    color: black;
+}
+#mainSidebar nav li {
+    margin: 0.1rem 0;
+    padding: 0.5rem 0;
 }
