@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Resume } from '../resume';
+import { ResumeService } from '../services/resume.service';
 
 @Component({
   selector: 'app-resume-view',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeViewComponent implements OnInit {
 
-  constructor() { }
+  resumeData : Resume;
+   
+  constructor(private resumeService : ResumeService) { }
 
   ngOnInit(): void {
+    this.getResumeData();
   }
+
+  getResumeData(){
+    this.resumeService.getResumeData().subscribe((data)=>{
+      this.resumeData = data;
+    }, (error)=>{
+      alert("something went wrong");
+    });
+  }
+
 
 }

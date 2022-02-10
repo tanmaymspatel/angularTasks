@@ -59,7 +59,7 @@ export class FormComponent implements OnInit {
   }
 
 
-  // get categories fron service
+  // get categories from service
   getCategoryOptions() {
     this.productService.getCategory().subscribe((categoryOption: Category[]) => {
       this.categoryOptions = categoryOption;

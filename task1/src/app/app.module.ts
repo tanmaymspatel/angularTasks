@@ -16,6 +16,7 @@ import { StructuralComponent } from './directives/structural/structural.componen
 import { AttributeComponent } from './directives/attribute/attribute.component';
 import { FirstCapitalPipe } from './first-capital.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { MainContentComponent } from './main-content/main-content.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     TwoWayComponent,
     StructuralComponent,
     AttributeComponent,
-    FirstCapitalPipe
+    FirstCapitalPipe,
+    MainContentComponent
     
     
   ],

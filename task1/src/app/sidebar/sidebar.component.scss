@@ -1,6 +1,14 @@
+
 #mainSidebar {
-    background: #f4f4f4;
     margin-right: 6rem;
+    height: 100%;
+    background: #f4f4f4;
+    padding: 2rem 4rem 0;
+}
+
+#mainSidebar h3{
+    text-align: center;
+    
 }
 #mainSidebar ul{
     display: flex;
