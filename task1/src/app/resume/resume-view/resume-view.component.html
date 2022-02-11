@@ -57,7 +57,7 @@
                         </td>
                         <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
                             <table class="table-technical" style="width: 100%;">
-                                <tr *ngFor = "let Skills of resumeData.technicalSkills">
+                                <tr>
                                     <td *ngFor="let skill of resumeData.technicalSkills">{{skill.techSkillName}}</td>
                                 </tr>
                             </table>
@@ -69,8 +69,8 @@
                         </td>
                         <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
                             <table class="experience-table">
-                                <tr style="border-bottom: 1px solid #d1d1d1;" *ngFor= "let details of resumeData.experience">
-                                    <td style="padding-bottom: 15px;" *ngFor= "let detail of resumeData.experience">
+                                <tr style="border-bottom: 1px solid #d1d1d1;"  *ngFor= "let detail of resumeData.experience">
+                                    <td style="padding-bottom: 15px;">
                                         <h3>{{detail.CompanyName}}</h3>
                                         <p>{{detail.jobPosition}}</p>
                                         <p>{{detail.jobDescription}}</p>
@@ -92,11 +92,11 @@
                             </table>
                         </td>
                     </tr>
-                    <tr class="education" *ngFor= "let edu of resumeData.education">
+                    <tr class="education" >
                         <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
                             <p style="font-weight:600;"><em>Education</em></p>
                         </td>
-                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1" *ngFor= "let edu of resumeData.education">
                             <h3>{{edu.instituteName}}</h3>
                             <p>{{edu.degreeName}} - <strong>{{edu.cgpa}}</strong></p>
                         </td>

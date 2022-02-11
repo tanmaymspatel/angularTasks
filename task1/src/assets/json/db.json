@@ -55,36 +55,104 @@
   ],
   "resume": [
     {
-      "fullName": "aa",
-      "designation": "aa",
-      "email": "sample@gmail.com",
-      "phoneNumber": "9825707023",
-      "profile": "hello, I am aspiring angular developer",
+      "fullName": "Tanmay Patel",
+      "designation": "Web Developer",
+      "email": "tanmay@gmail.com",
+      "phoneNumber": "8128569394",
+      "profile": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facere voluptatem a veniam quos, consequuntur sint corporis laudantium dignissimos totam?",
       "technicalSkills": [
         {
-          "techSkillName": "asas"
+          "techSkillName": "Html"
         },
         {
-          "techSkillName": "sas"
+          "techSkillName": "Css"
+        },
+        {
+          "techSkillName": "Js"
         }
       ],
       "experience": [
         {
-          "CompanyName": "asas",
-          "jobPosition": "asasas",
-          "jobDescription": "asasas",
-          "jobDurationStart": 11,
-          "jobDurationEnd": 1111
+          "CompanyName": "ABC IT Company",
+          "jobPosition": "Web Develper",
+          "jobDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet, illum magni sunt atque dignissimos.",
+          "jobDurationStart": 2019,
+          "jobDurationEnd": 2020
+        },
+        {
+          "CompanyName": "XYZ IT Company",
+          "jobPosition": "Web Develper",
+          "jobDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet, illum magni sunt atque dignissimos.",
+          "jobDurationStart": 2020,
+          "jobDurationEnd": 2021
         }
       ],
       "education": [
         {
-          "instituteName": "asasas",
-          "degreeName": "sasas",
-          "cgpa": "11111"
+          "instituteName": "Indiana University",
+          "degreeName": "Dual Major",
+          "cgpa": "4.0 GPA"
         }
       ],
       "id": 1
+    },
+    {
+      "fullName": "",
+      "designation": "",
+      "email": "",
+      "phoneNumber": "",
+      "profile": "",
+      "technicalSkills": [
+        {
+          "techSkillName": ""
+        }
+      ],
+      "experience": [
+        {
+          "CompanyName": "",
+          "jobPosition": "",
+          "jobDescription": "",
+          "jobDurationStart": null,
+          "jobDurationEnd": null
+        }
+      ],
+      "education": [
+        {
+          "instituteName": "",
+          "degreeName": "",
+          "cgpa": null
+        }
+      ],
+      "id": 2
+    },
+    {
+      "fullName": "",
+      "designation": "",
+      "email": "",
+      "phoneNumber": "",
+      "profile": "",
+      "technicalSkills": [
+        {
+          "techSkillName": ""
+        }
+      ],
+      "experience": [
+        {
+          "CompanyName": "",
+          "jobPosition": "",
+          "jobDescription": "",
+          "jobDurationStart": null,
+          "jobDurationEnd": null
+        }
+      ],
+      "education": [
+        {
+          "instituteName": "",
+          "degreeName": "",
+          "cgpa": null
+        }
+      ],
+      "id": 3
     }
   ]
 }

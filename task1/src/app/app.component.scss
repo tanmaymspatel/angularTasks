@@ -2,8 +2,10 @@
 .mainContent {
     display: flex;
 }
-.displayFlex{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 50px;
+// 
+.homeSidebar {
+    flex: 0 0 300px;
+}
+.homeMainContent {
+    flex-grow: 1;
 }

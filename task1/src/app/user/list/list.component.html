@@ -3,6 +3,7 @@
     <button routerLink="add">Add</button>
 </div>
 
+<!-- {{categories | json}} -->
 <div class="usersList">
     <table>
         <thead>
@@ -24,7 +25,7 @@
                 <td>{{user.email}}</td>
                 <td>{{user.phoneNumber}}</td>
                 <td>{{user.gender}}</td>
-                <td>{{user.department}}</td>
+                <td>{{user.department | categoryPipe:categories}}</td>
                 <td>{{user.dateOfEmployement }}</td>
                 <td><button (click)="editClick(user.id)">Edit</button></td>
                 <td><button (click)="deleteClick(user.id)">Delete</button></td>

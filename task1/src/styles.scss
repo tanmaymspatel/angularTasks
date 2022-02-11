@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     margin:0;
+
+}
+
+html, body, .mainContent, .mainTask{
+    height: 100%;
+    width: 100%;
+}
+.displayFlex{
+    display: flex;
+}
+.justifyContentCenter{
+    justify-content: center;
+}
+.alignItemsCenter{
+    align-items: center;
+}
+.flexWrap{
+    flex-wrap: wrap;
+}
+.flexGrow1{
+    flex-grow: 1;
+}
+.displayBlock{
+    display:block;
+}
+button{
+    cursor: pointer;
 }

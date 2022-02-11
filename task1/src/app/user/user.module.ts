@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
+import { CategoryPipePipe } from './pipes/category-pipe.pipe';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     ListComponent,
     FormComponent,
     FilterPipe,
+    CategoryPipePipe,
     
   ],
   imports: [

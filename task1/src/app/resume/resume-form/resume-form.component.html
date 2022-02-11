@@ -1,52 +1,54 @@
 <div class="resumeformcomponent">
-    <h2>Resume Form</h2>
+    <h2 class="Formheading">Resume Form</h2>
     <div class="resumeform">
         <form [formGroup]="resumeForm">
             <!-- name -->
             <div class="formElement resumeFullname">
-                <div>
-                    <label for="fullName">Enter Your Full Name:</label>
+                <div class="labelDiv">
+                    <label for="fullName">Enter Full Name:</label>
                 </div>
-                <div>
-                    <input type="text" name="fullName" formControlName="fullName" id="fullName">
+                <div class="input flexGrow1">
+                    <div>
+                        <input type="text" name="fullName" formControlName="fullName" id="fullName">
+                        <div *ngIf="resumeForm.get('fullName')?.touched && resumeForm.get('fullName')?.errors?.['required']">
+                            <small class="error-text">Enter valid name </small>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div *ngIf="resumeForm.get('fullName')!.touched && resumeForm.get('fullName')!.errors?.['required']">
-                    <small class="error-text">Enter valid name </small>
-                </div> -->
             </div>
             <!-- designation -->
             <div class="formElement resumeDesignation">
-                <div>
-                    <label for="designation">Enter Your Designation:</label>
+                <div class="labelDiv">
+                    <label for="designation">Enter Designation:</label>
                 </div>
-                <div>
+                <div class="input flexGrow1">
                     <input type="text" name="designation" formControlName="designation" id="designation">
                 </div>
             </div>
             <!-- email -->
             <div class="formElement resumeEmail">
-                <div>
-                    <label for="email">Enter Your Email Address:</label>
+                <div class="labelDiv">
+                    <label for="email">Enter Email Address:</label>
                 </div>
-                <div>
+                <div class="input flexGrow1">
                     <input type="emali" name="email" formControlName="email" id="email">
                 </div>
             </div>
             <!-- phone number -->
             <div class="formElement resumePhoneNumber">
-                <div>
-                    <label for="phoneNumber">Enter Your Phone Number:</label>
+                <div class="labelDiv">
+                    <label for="phoneNumber">Enter Phone Number:</label>
                 </div>
-                <div>
+                <div class="input flexGrow1">
                     <input type="tel" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber">
                 </div>
             </div>
             <!-- profile -->
             <div class="formElement resumeProfile">
-                <div>
-                    <label for="profile">Enter Your Profile:</label>
+                <div class="labelDiv">
+                    <label for="profile">Enter Profile:</label>
                 </div>
-                <div>
+                <div class="input flexGrow1">
                     <input type="text" name="profile" formControlName="profile" id="profile">
                 </div>
             </div>
@@ -66,54 +68,82 @@
             </div> -->
             <!-- Technical Skills  -->
             <div class="formElement resumeTechnicalSkills">
-                <div><label for="techSkills">Technical Skills:</label>
-                <button type="button" class="btn" (click)="addTechSkills()">Add</button></div>
-                <div formArrayName="technicalSkills">
-                    <div  *ngFor=" let skill of getTechSkillsArray().controls; let i = index">
-                        <div  [formGroupName]="i">
-                            <input type="text" formControlName="techSkillName" placeholder="Technical Skill">
-                            <button  (click)="deleteTechSkills(i)">delete</button>
-                        </div> 
+                <div class="labelDiv">
+                    <label for="techSkills">Technical Skills:</label>
+                </div>
+
+                <div formArrayName="technicalSkills" class="flexGrow1">
+                    <div *ngFor=" let skill of getTechSkillsArray().controls; let i = index">
+                        <div [formGroupName]="i">
+                            <input class="formControlInput displayBlock" type="text" formControlName="techSkillName"
+                                placeholder="Technical Skill">
+                            <div
+                                *ngIf="getAsFormGroup(skill).controls['techSkillName'].touched && getAsFormGroup(skill).controls['techSkillName'].errors?.['required']">
+                                <small class="error-text">This Field is required </small>
+                            </div>
+                            <button class="btn btnDelete" (click)="deleteTechSkills(i)">delete</button>
+                        </div>
                     </div>
-                </div> 
+                </div>
+                <div class="addBtn">
+                    <button class="btn btnAdd" type="button" class="btn" (click)="addTechSkills()">Add</button>
+                </div>
             </div>
             <!-- Experience -->
             <div class="formElement resumeExperience">
-                <div><label for="experience">Experience:</label>
-                <button type="button" class="btn" (click)="addExperience()">Add</button></div>
-                <div formArrayName="experience">
-                    <div  *ngFor=" let skill of getExperienceArray().controls; let i = index">
-                        <div  [formGroupName]="i">
-                            <input type="text" formControlName="CompanyName" placeholder="Company Name">
-                            <input type="text" formControlName="jobPosition" placeholder="Designation">
-                            <input type="text" formControlName="jobDescription" placeholder="Job Description">
-                            <input type="number" formControlName="jobDurationStart" placeholder="Starting Year">
-                            <input type="number" formControlName="jobDurationEnd" placeholder="Leaving Year">
-                            <button (click)="deleteExperience(i)">delete</button>
-                        </div> 
+                <div class="labelDiv">
+                    <label for="experience">Experience:</label>
+                </div>
+
+                <div formArrayName="experience" class="flexGrow1">
+                    <div *ngFor=" let skill of getExperienceArray().controls; let i = index">
+                        <div [formGroupName]="i">
+                            <input class="formControlInput displayBlock" type="text" formControlName="CompanyName"
+                                placeholder="Company Name">
+                            <input class="formControlInput displayBlock" type="text" formControlName="jobPosition"
+                                placeholder="Designation">
+                            <input class="formControlInput displayBlock" type="text" formControlName="jobDescription"
+                                placeholder="Job Description">
+                            <input class="formControlInput displayBlock" type="number"
+                                formControlName="jobDurationStart" placeholder="Starting Year">
+                            <input class="formControlInput displayBlock" type="number" formControlName="jobDurationEnd"
+                                placeholder="Leaving Year">
+                            <button class="btn btnDelete" (click)="deleteExperience(i)">delete</button>
+                        </div>
                     </div>
-                </div> 
+                </div>
+                <div class="addBtn">
+                    <button class="btn btnAdd" type="button" class="btn" (click)="addExperience()">Add</button>
+                </div>
             </div>
             <!-- Education -->
             <div class="formElement resumeEducation">
-                <div><label for="education">Education:</label>
-                <button type="button" class="btn" (click)="addEducation()">Add</button></div>
-                <div formArrayName="education">
+                <div class="labelDiv">
+                    <label for="education">Education:</label>
+                </div>
+
+                <div formArrayName="education" class="flexGrow1">
                     <!-- {{ getEducationArray().controls | json }} -->
-                    <div  *ngFor=" let skill of getEducationArray().controls; let i = index">
-                        <div  [formGroupName]="i">
-                            <input type="text" formControlName="instituteName" placeholder="Institute Name">
-                            <input type="text" formControlName="degreeName" placeholder="Degree Name">
-                            <input type="text" formControlName="cgpa" placeholder="Enter CGPA">
-                            <button (click)="deleteEducation(i)">delete</button>
-                        </div> 
+                    <div *ngFor=" let skill of getEducationArray().controls; let i = index">
+                        <div [formGroupName]="i">
+                            <input class="formControlInput displayBlock" type="text" formControlName="instituteName"
+                                placeholder="Institute Name">
+                            <input class="formControlInput displayBlock" type="text" formControlName="degreeName"
+                                placeholder="Degree Name">
+                            <input class="formControlInput displayBlock" type="text" formControlName="cgpa"
+                                placeholder="Enter CGPA">
+                            <button class="btn btnDelete" (click)="deleteEducation(i)">delete</button>
+                        </div>
                     </div>
-                </div> 
+                </div>
+                <div class="addBtn">
+                    <button class="btn btnAdd" type="button" class="btn" (click)="addEducation()">Add</button>
+                </div>
             </div>
-           
+
             <!-- submit button -->
-            <div class="formElement submit">
-                <input type="submit" value="Submit" (click)="showResumeData()">
+            <div class="submit">
+                <input class="btn formSubmitBtn" type="submit" value="Submit" (click)="showResumeData()">
                 <!-- <input type="submit" value="Submit" [disabled]="!resumeForm.valid" (click)="showResumeData()"> -->
             </div>
         </form>

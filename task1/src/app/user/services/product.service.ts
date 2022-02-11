@@ -40,6 +40,8 @@ export class ProductService {
   deleteUser(id:number):Observable<number>{
     return this.http.delete<number>(`${this.apiLink}/users/${id}`);
   }
+
+
 }
 
 

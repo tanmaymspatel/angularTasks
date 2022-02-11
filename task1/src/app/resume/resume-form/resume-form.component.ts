@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ResumeService } from '../services/resume.service';
 
@@ -41,6 +41,7 @@ export class ResumeFormComponent implements OnInit {
   }
 
   showResumeData(){
+    console.log(this.resumeForm);
     this.resumeServices.saveData(this.resumeForm.value).subscribe(res=>{
       alert("data submitted!")
     }, (error) => {
@@ -73,11 +74,15 @@ export class ResumeFormComponent implements OnInit {
   //   console.log(this.skills.length)
   // }
 
+  getAsFormGroup(ac: AbstractControl): FormGroup {
+    return ac as FormGroup;
+  }
+
 
   //technical skills
   getNewTechSkillsRow(): FormGroup {
     return this.fb.group({
-      techSkillName: [""]
+      techSkillName: ["",Validators.required]
     });
   }
   getTechSkillsArray() : FormArray{
@@ -96,8 +101,6 @@ export class ResumeFormComponent implements OnInit {
     }
     console.log(this.technicalSkills.length)
   }
-
-
 
   //Experience
   getExperienceRow(): FormGroup {

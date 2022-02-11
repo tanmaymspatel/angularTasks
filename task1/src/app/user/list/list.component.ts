@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { user } from 'src/app/shared/model/model';
+import { Category, user } from 'src/app/shared/model/model';
 import { ProductService } from '../services/product.service';
 import { Router, Routes } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { Router, Routes } from '@angular/router';
 export class ListComponent implements OnInit {
 
   users: user[] =[];
+  categories: Category[];
   nameSearch : any = "";
 
 
@@ -18,6 +19,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
       this.getUsers();
+      this.getCategories();
   }
 
   getUsers() {
@@ -37,5 +39,14 @@ export class ListComponent implements OnInit {
       alert("user is deleted")
     })
     this.getUsers();
+  }
+
+
+  getCategories(){
+    this.productService.getCategory().subscribe((categories:Category[])=>{
+      this.categories = categories;
+    }, (error : Category[])=>{
+      alert("something wen wrong")
+    });
   }
 }

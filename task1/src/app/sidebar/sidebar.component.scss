@@ -1,13 +1,26 @@
+// general class
+
 
 #mainSidebar {
-    margin-right: 6rem;
     height: 100%;
-    background: #f4f4f4;
-    padding: 2rem 4rem 0;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.sideHeader {
+    flex-basis: 60px;
+}
+
+.sidebarContent {
+    flex-grow: 1;
+    overflow: auto;
 }
 
 #mainSidebar h3{
     text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
     
 }
 #mainSidebar ul{
@@ -15,15 +28,27 @@
     flex-direction: column;
     list-style: none;
     padding-inline-start: 0;
-    padding: 0.5rem 1rem;
+    padding: 0 2.5rem;
 }
 
 
 #mainSidebar nav a {
     text-decoration: none;
     color: black;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
 }
 #mainSidebar nav li {
-    margin: 0.1rem 0;
-    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.2rem;
+    background-color: #eaedfc;
+    border-radius: 10px;
+    transition: 0.4S all;
 }
+
+#mainSidebar nav li:hover{
+background-color: #eaedfc6b;
+}
+
+
