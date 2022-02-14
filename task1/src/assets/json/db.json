@@ -21,38 +21,7 @@
       "name": "Tester"
     }
   ],
-  "users": [
-    {
-      "firstName": "Tanmay",
-      "lastName": "Patel",
-      "email": "tanmay.1rivet@gmail.com",
-      "phoneNumber": "8128569394",
-      "gender": "Male",
-      "department": "2",
-      "dateOfEmployement": "2022-02-22",
-      "id": 1
-    },
-    {
-      "firstName": "Sushil",
-      "lastName": "Modi",
-      "email": "shusi@gmail.com",
-      "phoneNumber": "9825707023",
-      "gender": "Male",
-      "department": "4",
-      "dateOfEmployement": "2022-02-25",
-      "id": 3
-    },
-    {
-      "firstName": "Ankit",
-      "lastName": "Modi",
-      "email": "shusi@gmail.com",
-      "phoneNumber": "9825707023",
-      "gender": "Male",
-      "department": "2",
-      "dateOfEmployement": "2022-02-24",
-      "id": 4
-    }
-  ],
+  "users": [],
   "resume": [
     {
       "fullName": "Tanmay Patel",
@@ -153,6 +122,116 @@
         }
       ],
       "id": 3
+    }
+  ],
+  "office": [
+    {
+      "id": 1,
+      "name": "Office1"
+    },
+    {
+      "id": 2,
+      "name": "Office2"
+    },
+    {
+      "id": 3,
+      "name": "Office3"
+    },
+    {
+      "id": 4,
+      "name": "Office4"
+    },
+    {
+      "id": 5,
+      "name": "Office5"
+    }
+  ],
+  "clientname": [
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "JBL"
+    },
+    {
+      "id": 3,
+      "name": "1rivet"
+    }
+  ],
+  "userdata": [
+    {
+      "id": 2,
+      "firstName": "Sushil",
+      "lastName": "Patel",
+      "email": "shusi@gmail.com",
+      "primaryContactNumber": "9898989898",
+      "clientName": "2",
+      "office": "2"
+    },
+    {
+      "id": 3,
+      "firstName": "Tanmay",
+      "lastName": "Patel",
+      "email": "tanmay.1rivet@gmail.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "2",
+      "office": "2"
+    },
+    {
+      "id": 4,
+      "firstName": "Jinal",
+      "lastName": "Patel",
+      "email": "jinal@gmail.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "1",
+      "office": "1"
+    },
+    {
+      "id": 5,
+      "firstName": "Divya",
+      "lastName": "Patel",
+      "email": "divya@divya.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "3",
+      "office": "4"
+    },
+    {
+      "id": 6,
+      "firstName": "Viral ",
+      "lastName": "Patel",
+      "email": "viral@gmail.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "1",
+      "office": "3"
+    },
+    {
+      "firstName": "Neel",
+      "lastName": "Shah",
+      "email": "neel@yahoo.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "3",
+      "office": "3",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "firstName": "Meet",
+      "lastName": "Parmar",
+      "email": "meet@hotmail.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "1",
+      "office": "3"
+    },
+    {
+      "firstName": "Heti ",
+      "lastName": "Patel",
+      "email": "heti@gmail.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "3",
+      "office": "4",
+      "id": 9
     }
   ]
 }

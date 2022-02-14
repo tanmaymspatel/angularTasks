@@ -17,6 +17,9 @@ import { AttributeComponent } from './directives/attribute/attribute.component';
 import { FirstCapitalPipe } from './first-capital.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { MainContentComponent } from './main-content/main-content.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FilterDataPipe } from './Assessment/pipe/filter-data.pipe';
+
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { MainContentComponent } from './main-content/main-content.component';
     StructuralComponent,
     AttributeComponent,
     FirstCapitalPipe,
-    MainContentComponent
+    MainContentComponent,
+    PagenotfoundComponent
+
+ 
     
     
   ],

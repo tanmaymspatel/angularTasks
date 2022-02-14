@@ -35,7 +35,7 @@ export class ListComponent implements OnInit {
   }
 
   deleteClick(id:number){
-    this.productService.deleteUser(id).subscribe(ers => {
+    this.productService.deleteUser(id).subscribe(res => {
       alert("user is deleted")
     })
     this.getUsers();

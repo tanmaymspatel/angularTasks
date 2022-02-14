@@ -1,0 +1,136 @@
+<div class="userPage">
+    <!-- start: top bar -->
+    <div class="userTopBar displayFlex">
+        <div class="flexGrow1">
+            <h2 class="userHeading">Users</h2>
+        </div>
+        <div class="userSearch">
+            <label for="clients">Clients </label>
+            <select id="clientName" name="clientName" formControlName="clientName"
+                            placeholder="Client Name*">
+                            <option value="All" selected>All</option>
+                            <option *ngFor="let client of clientNameList" [value]="client.id">{{client.name}}</option>
+                        </select>
+            <input type="search" name="search" id="search" 
+            placeholder="Search Here" [(ngModel)]="nameSearch"> 
+            <button>Search</button>
+        </div>
+        <div class="newUserBtn">
+            <button class="button blueButton" (click)='clickNewUser()'>NEW USER</button>
+        </div>
+    </div>
+    <!-- end : top bar -->
+    <!-- start : form -->
+    <div class="userForm" *ngIf="formShow">
+        <form [formGroup]="userForm">
+            <div class="formFields">
+                <div class="row1 row">
+                    <!-- start : first name -->
+                    <div class="formElement">
+                        <label class="formLabel" for="firstName">First Name: </label>
+                        <input type="text" name="firstName" formControlName="firstName" id="firstName"
+                            placeholder="First Name*">
+                        <div
+                            *ngIf="userForm.get('firstName')?.touched && userForm.get('firstName')?.errors?.['required']">
+                            <small class="error-text">This Field is required </small>
+                        </div>
+                    </div>
+                    <!-- end : first name -->
+                    <!-- start : last name -->
+                    <div class="formElement">
+                        <label class="formLabel" for="lastName">Last Name: </label>
+                        <input type="text" name="lastName" formControlName="lastName" id="lastName"
+                            placeholder="Last Name*">
+                        <div
+                            *ngIf="userForm.get('lastName')?.touched && userForm.get('lastName')?.errors?.['required']">
+                            <small class="error-text">This Field is required </small>
+                        </div>
+                    </div>
+                    <!-- end : last name -->
+                    <!-- start : email -->
+                    <div class="formElement">
+                        <label class="formLabel" for="email">Enter Email: </label>
+                        <input type="email" name="email" formControlName="email" id="email" placeholder="Email*">
+                        <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['required']">
+                            <small class="error-text">This Field is required </small>
+                        </div>
+                    </div>
+                    <!-- end : email -->
+                    <!-- start : contact number -->
+                    <div class="formElement">
+                        <label class="formLabel" for="primaryContactNumber">Primary Contact Number: </label>
+                        <input type="tel" name="primaryContactNumber" formControlName="primaryContactNumber"
+                            id="primaryContactNumber" placeholder="Primary Contact Number*">
+                        <div
+                            *ngIf="userForm.get('primaryContactNumber')?.touched && userForm.get('primaryContactNumber')?.errors?.['required']">
+                            <small class="error-text">This Field is required </small>
+                        </div>
+                    </div>
+                    <!-- end : contact number -->
+                </div>
+                <div class="row2 row justifyContentCenter">
+                    <!--  start : client name -->
+                    <div class="formElement">
+                        <label class="formLabel" for="clientName">Client Name: </label>
+                        <select id="clientName" name="clientName" formControlName="clientName"
+                            placeholder="Client Name*">
+                            <option [value]="0" disabled>Client Name*</option>
+                            <option *ngFor="let client of clientNameList" [value]="client.id">{{client.name}}</option>
+                        </select>
+                        <div
+                            *ngIf="userForm.get('clientName')?.touched && userForm.get('clientName')?.errors?.['required']">
+                            <small class="error-text">This Field is required </small>
+                        </div>
+                    </div>
+                    <!-- end : client name -->
+                    <!-- start : office name -->
+                    <div class="formElement">
+                        <label class="formLabel" for="office">Office: </label>
+                        <select id="office" name="office" formControlName="office" placeholder="Office*">
+                            <option [value]="0" disabled selected>Office*</option>
+                            <option *ngFor="let office of officeList" [value]="office.id">{{office.name}}</option>
+                        </select>
+                        <div *ngIf="userForm.get('office')?.touched && userForm.get('office')?.errors?.['required']">
+                            <small class="error-text">This Field is required </small>
+                        </div>
+                    </div>
+                    <!-- end : office name -->
+                </div>
+            </div>
+            <div class="formBtns row">
+                <button class="button cancelButton" (click)="cancelData()">CANCEL</button>
+                <button class="button blueButton" (click)="saveFormData()">SAVE</button>
+            </div>
+        </form>
+    </div>
+    <!-- end : form -->
+    <!-- start : user list  -->
+    <div class="userList">
+        <table class="userDataList">
+            <thead>
+                <tr>
+                    <th>FIRST NAME</th>
+                    <th>LAST NAME</th>
+                    <th>CLIENT NAME</th>
+                    <th>EMAIL</th>
+                    <th>OFFICE</th>
+                    <th>CONTACT NUMBER</th>
+                    <th colspan="2">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of userList | filterData:nameSearch">
+                    <td>{{data.firstName}}</td>
+                    <td>{{data.lastName}}</td>
+                    <td>{{data.clientName}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.office}}</td>
+                    <td>{{data.primaryContactNumber}}</td>
+                    <td><button class="formBtn editBtn" (click)="editClick(data.id)">Edit</button></td>
+                    <td><button class="formBtn deleteBtn" (click)="deleteClick(data.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end : user list -->
+</div>

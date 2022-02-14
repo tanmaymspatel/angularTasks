@@ -4,12 +4,13 @@ import { AttributeComponent } from './directives/attribute/attribute.component';
 import { StructuralComponent } from './directives/structural/structural.component';
 import { MainComponent } from './main/main.component';
 import { OneWayBindingComponent } from './one-way-binding/one-way-binding.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ParentComponent } from './parent/parent.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 // import { ListComponent } from './user/list/list.component';
 
 const routes: Routes = [
-  {path : '', component : MainComponent},
+  {path : '', redirectTo:'form',pathMatch:'full'},
   {path : 'form', component : MainComponent},
   {path : 'onewayBinding', component : OneWayBindingComponent},
   {path : 'twowayBinding', component : TwoWayComponent},
@@ -23,6 +24,13 @@ const routes: Routes = [
   {
     path: 'resume-form',
     loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
+  },
+  {
+    path: 'assessment',
+    loadChildren: () => import('./Assessment/user2/user2.module').then(m => m.User2Module)
+  },
+  {
+  path:'**', component : PagenotfoundComponent 
   }
 ];
 

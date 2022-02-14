@@ -8,6 +8,10 @@ html, body, .mainContent, .mainTask{
     height: 100%;
     width: 100%;
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 .displayFlex{
     display: flex;
 }
