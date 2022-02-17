@@ -21,7 +21,48 @@
       "name": "Tester"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "firstName": "Tanmay",
+      "lastName": "Patel",
+      "email": "sample@gmail.com",
+      "phoneNumber": "9825707023",
+      "gender": "Male",
+      "department": "2",
+      "dateOfEmployement": "2022-02-18",
+      "id": 1
+    },
+    {
+      "firstName": "Viral",
+      "lastName": "Patel",
+      "email": "sample@gmail.com",
+      "phoneNumber": "8888888888",
+      "gender": "Male",
+      "department": "2",
+      "dateOfEmployement": "2015-06-10",
+      "id": 2
+    },
+    {
+      "firstName": "Ankit",
+      "lastName": "Modi",
+      "email": "ample@gmail.com",
+      "phoneNumber": "8128569394",
+      "gender": "Male",
+      "department": "4",
+      "dateOfEmployement": "2022-02-25",
+      "id": 3
+    },
+    {
+      "firstName": "Sushil",
+      "lastName": "Modi",
+      "email": "sample@gmail.com",
+      "phoneNumber": "9825707023",
+      "gender": "Male",
+      "department": "3",
+      "dateOfEmployement": "2020-06-09",
+      "id": 4
+    }
+  ],
   "resume": [
     {
       "fullName": "Tanmay Patel",
@@ -225,13 +266,22 @@
       "office": "3"
     },
     {
-      "firstName": "Heti ",
+      "firstName": "Hetiasasas",
       "lastName": "Patel",
       "email": "heti@gmail.com",
       "primaryContactNumber": "9999999999",
       "clientName": "3",
       "office": "4",
       "id": 9
+    },
+    {
+      "firstName": "Heloo",
+      "lastName": "Patel",
+      "email": "tanmay.1rivet@gmail.com",
+      "primaryContactNumber": "9999999999",
+      "clientName": "2",
+      "office": "2",
+      "id": 10
     }
   ]
 }

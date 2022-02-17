@@ -16,7 +16,7 @@
             <button>Search</button>
         </div>
         <div class="newUserBtn">
-            <button class="button blueButton" (click)='clickNewUser()'>NEW USER</button>
+            <button class="button blueButton" (click)='clickNewUser()'>+ NEW USER</button>
         </div>
     </div>
     <!-- end : top bar -->
@@ -106,9 +106,10 @@
     <!-- end : form -->
     <!-- start : user list  -->
     <div class="userList">
-        <table class="userDataList">
+        <table cellspacing="0" class="userDataList">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>FIRST NAME</th>
                     <th>LAST NAME</th>
                     <th>CLIENT NAME</th>
@@ -119,12 +120,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of userList | filterData:nameSearch">
+                <tr *ngFor="let data of userList | filterData:nameSearch ; let i = index">
+                    <td>{{i+1}}</td>
                     <td>{{data.firstName}}</td>
                     <td>{{data.lastName}}</td>
-                    <td>{{data.clientName}}</td>
+                    <td>{{data.clientName | clientName:clientNameList}}</td>
                     <td>{{data.email}}</td>
-                    <td>{{data.office}}</td>
+                    <td>{{data.office | officeName:officeList}}</td>
                     <td>{{data.primaryContactNumber}}</td>
                     <td><button class="formBtn editBtn" (click)="editClick(data.id)">Edit</button></td>
                     <td><button class="formBtn deleteBtn" (click)="deleteClick(data.id)">Delete</button></td>

@@ -1,6 +1,12 @@
-<div class="headerArea">
-    <input type="search" name="search" id="search" placeholder="Search Here" [(ngModel)]="nameSearch">
-    <button routerLink="add">Add</button>
+<div class="headerArea displayFlex">
+    <div class="searchField flexGrow1">
+        <input type="search" name="search" id="search" placeholder="Search Here"
+            [(ngModel)]="nameSearch">
+        <!-- <span class="icon-search"></span> -->
+    </div>
+    <div class="buttonArea">
+        <button routerLink="add">Add</button>
+    </div>
 </div>
 
 <!-- {{categories | json}} -->
@@ -8,7 +14,7 @@
     <table>
         <thead>
             <tr>
-                <th>Sr No.</th>
+                <th>#</th>
                 <th>Name</th>
                 <th>Email id</th>
                 <th>Phone Number</th>
@@ -30,8 +36,8 @@
                 <td><button (click)="editClick(user.id)">Edit</button></td>
                 <td><button (click)="deleteClick(user.id)">Delete</button></td>
             </tr>
-           
+
         </tbody>
     </table>
- 
+
 </div>

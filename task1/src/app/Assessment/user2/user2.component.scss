@@ -20,7 +20,7 @@
 .userHeading {
     margin-block-start: 0;
     margin-block-end: 0;
-    padding-left: 1rem;
+    padding-left: 3rem;
 }
 // user form css
 
@@ -40,16 +40,6 @@ form input {
     padding: 0.2rem 5rem 0.2rem 1rem;
 }
 
-.userList thead th {
-    background-color: #e6e7eb;
-    padding: 0.85rem 0;
-    padding-left: 1rem;
-}
-
-.userList tbody td {
-    padding: 0.8rem 0;
-    padding-left: 1rem;
-}
 .error-text {
     color: red;
 }
@@ -80,9 +70,29 @@ form input {
     margin: 5rem 0 0;
 }
 .userDataList {
-    width: 100%;
+    width: 95%;
     text-align: left;
+    background-color: white;
+    margin: 0 auto;
+    border:1px solid #f6f7f9 ;
+    border-radius: 10px;
+    td, tr{
+        border-top:4px solid #f6f7f9 ;
+    }
 }   
+
+.userList thead th {
+    padding: 0.85rem 0;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    color:#c5c6ca
+}
+
+.userList tbody td {
+    padding: 0.8rem 0;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
 
 .formBtn {
     padding: 0.5rem 1rem;

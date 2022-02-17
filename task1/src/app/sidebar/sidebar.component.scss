@@ -11,44 +11,53 @@
 .sideHeader {
     flex-basis: 60px;
 }
-
-.sidebarContent {
-    flex-grow: 1;
-    overflow: auto;
-}
-
 #mainSidebar h3{
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
     
 }
-#mainSidebar ul{
+
+.sidebarContent {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebarContent ul{
     list-style: none;
-    padding-inline-start: 0;
-    padding: 0 2.5rem;
+    padding: 0 1rem;
 }
 
 
-#mainSidebar nav a {
+.sidebarContent  a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
     margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
-#mainSidebar nav li {
-    margin: 0.5rem 0;
+.sidebarContent  a span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.sidebarContent  li {
+    margin: 0.8rem 0;
     padding: 0.5rem 0.2rem;
     background-color: #eaedfc;
     border-radius: 10px;
     transition: 0.4S all;
 }
 
-#mainSidebar nav li:hover{
+#mainSidebar  li:hover{
 background-color: #eaedfc6b;
 }
 
 
+.icon{
+    font-size: 0.9rem;
+}

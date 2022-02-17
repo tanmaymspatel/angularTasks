@@ -18,6 +18,7 @@ export class User2Component implements OnInit {
   userToEdit: number;
   formShow:boolean = false;
   nameSearch : any = "";
+  gotId:number;
 
   constructor(private userService: UserFormService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -35,12 +36,12 @@ export class User2Component implements OnInit {
     this.getClientNames();
     this.getOfficeNames();
     this.getUserData();
-    this.userToEdit = this.activatedRoute.snapshot.params['id'];
-    if (this.userToEdit) {
-      this.userService.getUserById(this.userToEdit).subscribe((user) => {
-        this.userForm.patchValue(user);
-      });
-    }
+    // this.userToEdit = this.activatedRoute.snapshot.params['id'];
+    // if (this.userToEdit) {
+    //   this.userService.getUserById(this.userToEdit).subscribe((user) => {
+    //     this.userForm.patchValue(user);
+    //   });
+    // }
 
   }
 
@@ -51,8 +52,8 @@ clickNewUser(){
 }
   // click on save btn
   saveFormData() {
-    if (this.userToEdit) {
-      this.userService.editUser({ id: this.userToEdit, ...this.userForm.value }).subscribe(res => {
+    if (this.gotId) {
+      this.userService.editUser(this.gotId,this.userForm.value).subscribe(res => {
         alert('save form');
         this.getUserData();
       }, (error) => {
@@ -79,7 +80,8 @@ clickNewUser(){
   cancelData() {
     this.userForm.reset();
     this.getUserData();
-    this.router.navigate([`/assessment`]);
+    this.formShow = !this.formShow ;
+    // this.router.navigate([`/assessment`]);
   }
 
 
@@ -88,8 +90,7 @@ clickNewUser(){
     this.userService.getClientName().subscribe((clients) => {
       this.clientNameList = clients;
     }, (error) => {
-      debugger
-      // alert("Somethings Went Wrong");
+      alert("Somethings Went Wrong");
     })
   }
 
@@ -111,7 +112,13 @@ clickNewUser(){
 
   // while clicking on edit button
   editClick(id: number) {
-    this.router.navigate([`/assessment/edit/${id}`]);
+    this.userService.getUserById(id).subscribe(res =>{
+      this.userForm.patchValue(res);
+      
+    })
+    this.gotId = id;
+    // this.router.navigate([`/assessment/edit/${id}`]);
+
     this.formShow = true;
   }
 

@@ -40,8 +40,8 @@ export class UserFormService {
   }
 
   // edit the user data
-  editUser(user: User2): Observable<User2> {
-    return this.http.put<User2>(`${this.apiLink}/userdata/${user.id}`, user);
+  editUser(id:number ,user: User2): Observable<User2[]> {
+    return this.http.put<User2[]>(`${this.apiLink}/userdata/${id}`, user);
   }
 
   // delete the user from data
