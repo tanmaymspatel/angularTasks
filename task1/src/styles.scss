@@ -1,35 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    margin:0;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body, .mainContent, .mainTask{
+html,
+body,
+.mainContent,
+.mainTask {
     height: 100%;
     width: 100%;
 }
-.row{
+table{
+    overflow: auto;
+}
+.row {
     display: flex;
     flex-wrap: wrap;
 }
-.displayFlex{
+.displayFlex {
     display: flex;
 }
-.justifyContentCenter{
+.justifyContentCenter {
     justify-content: center;
 }
-.alignItemsCenter{
+.alignItemsCenter {
     align-items: center;
 }
-.flexWrap{
+.flexWrap {
     flex-wrap: wrap;
 }
-.flexGrow1{
+.flexGrow1 {
     flex-grow: 1;
 }
-.displayBlock{
-    display:block;
+.displayBlock {
+    display: block;
 }
-button{
+button, #hamburgerIcon, a, #closeIcon {
     cursor: pointer;
+}
+
+// toggle sidebar
+.homeSidebar{
+    transition:ease-in-out 0.6s;
+}
+.homeSidebar .icon + span, .homeSidebar .sideHeader h3, .homeSidebar .icon, #closeIcon, #hamburgerIcon{
+    transition:ease-in-out 0.3s;
+    opacity:1;
+}
+.homeSidebar .icon + span{
+    display: inline;
+}
+
+#hamburger, #closeIcon{
+    display: none;
+}
+#hamburgerIcon, #closeIcon {
+    position: absolute;
+    top: 17px;
+    left: 30px;
+    transition:ease-in-out 0.6s;
+    font-size: 1.5rem;
+    z-index: 1001;
+}
+#hamburger:checked ~ .homeSidebar {
+    flex: 0 0 85px;
+    // transform: translateX(-150px);
+}
+#hamburger:checked ~ .homeSidebar .icon + span, #hamburger:checked ~ .homeSidebar .sideHeader h3 {
+    opacity: 0;
+    display: none;
+}
+
+#hamburger:checked ~ .homeSidebar .icon{
+    font-size: 1.3rem;
+}
+#hamburger:checked ~ label #hamburgerIcon{
+    display: none;
+}
+#hamburger:checked ~ label #closeIcon{
+    display: block;
 }
