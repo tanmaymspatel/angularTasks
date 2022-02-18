@@ -1,0 +1,68 @@
+// general class
+
+
+#mainSidebar {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.sideHeader {
+    flex-basis: 60px;
+}
+#mainSidebar h3{
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    
+}
+
+.sidebarContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebarContent ul{
+    list-style: none;
+    padding: 0 1rem;
+}
+
+
+.sidebarContent  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebarContent  a span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.sidebarContent  li {
+    margin: 0.8rem 0;
+    padding: 0.5rem 0.2rem;
+    background-color: #eaedfc;
+    border-radius: 10px;
+    transition: 0.4S all;
+}
+
+#mainSidebar  li:hover{
+background-color: #eaedfc6b;
+}
+
+
+.icon{
+    font-size: 0.9rem;
+}
+
+.navItem a{
+    height: 25px;
+    white-space: nowrap;
+}

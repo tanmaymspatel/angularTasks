@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+header{
+    background: aquamarine;
+    padding: 0.5rem 0;
+}
+a{
+    text-decoration: none;
+}
