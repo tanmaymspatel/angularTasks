@@ -21,16 +21,27 @@
     }
     .buttonArea{
         flex-basis: 150px;
-        button{
-            background-color: #2f6bff;
-            border-color: transparent;
-            padding: 0.5rem 4rem;
-            color: white;
+        .addButton{
+            background-color: #2f6bff;  
+            padding: 0.5rem 4rem;         
         }
     }
 }
 
+.button{
+    border-color: transparent;
+    color: white;
+    border-radius: 10px;
+}
 
+.editButton{
+    background-color: #4CAF50;
+    padding: 0.2rem 0.5rem;
+}
+.deleteButton{
+    background-color: #f44336;
+    padding: 0.2rem 0.5rem;
+}
 
 .usersList {
     margin-top: 3rem;
@@ -47,6 +58,7 @@ table{
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
+    padding: 1rem;
     thead{
         tr{
             th{

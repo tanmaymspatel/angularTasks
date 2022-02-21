@@ -38,7 +38,7 @@ const routes: Routes = [
     loadChildren: () => import('./Assessment/user2/user2.module').then(m => m.User2Module)
   },
   {
-    path: 'parentChildCommunication',
+    path: 'parentChild',
     loadChildren: () => import('./parent-child/parent-child.module').then(m => m.ParentChildModule)
   },
   {

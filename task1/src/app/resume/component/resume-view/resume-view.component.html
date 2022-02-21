@@ -1,0 +1,114 @@
+<!-- {{resumeData | json}} -->
+    <div>
+        <div style="width: 850px; padding:50px; margin:20px auto; background-color:#f5f5f5; border-top: 5px solid black; border-bottom:5px solid black">
+            <div>
+                <table>
+                    <tr>
+                        <td style="padding-bottom:20px; border-bottom:1px solid #d1d1d1">
+                            <h1>{{resumeData.fullName}}</h1>
+                            <p><em>{{resumeData.designation}}</em></p>
+                        </td>
+                        <td style="width: 20%; border-bottom: 1px solid #d1d1d1;">
+                            <button>Download PDF</button>
+                            <p><a style="color:#ff0000;font-weight: 900;" href="mailto:{{resumeData.email}}">{{resumeData.email}}</a></p>
+                            <p>{{resumeData.phoneNumber}}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr class="profile">
+                        <td style="width: 15%; padding:20px 10px; border-bottom:1px solid #d1d1d1;">
+                            <p style="font-weight:600;"><em>Profile</em></p>
+                        </td>
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <p>{{resumeData.profile}}</p>
+                        </td>
+                    </tr>
+                    <tr class="skills">
+                        <td style="width:15%; padding:20px 10px; border-bottom: 1px solid #d1d1d1;">
+                            <p style="font-weight:600;"><em>Skills</em></p>
+                        </td>
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <table class="table-skills">
+                                <tr>
+                                    <th style="padding-bottom: 5px;">Web Design</th>
+                                    <th style="padding-bottom: 5px;">Interface Design</th>
+                                    <th style="padding-bottom: 5px;">Project Direction</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, possimus unde impedit debitis nostrum temporibus eius consequuntur ad saepe sint?
+                                    </td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, possimus unde impedit debitis nostrum temporibus eius consequuntur ad saepe sint?
+                                    </td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, possimus unde impedit debitis nostrum temporibus eius consequuntur ad saepe sint?
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="technical">
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <p style="font-weight:600;"><em>Technical</em></p>
+                        </td>
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <table class="table-technical" style="width: 100%;">
+                                <tr>
+                                    <td *ngFor="let skill of resumeData.technicalSkills">{{skill.techSkillName}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr  class="experience">
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <p style="font-weight:600;"><em>Experience</em></p>
+                        </td>
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <table class="experience-table">
+                                <tr style="border-bottom: 1px solid #d1d1d1;"  *ngFor= "let detail of resumeData.experience">
+                                    <td style="padding-bottom: 15px;">
+                                        <h3>{{detail.CompanyName}}</h3>
+                                        <p>{{detail.jobPosition}}</p>
+                                        <p>{{detail.jobDescription}}</p>
+                                    </td>
+                                    <td style="width: 15%;" *ngFor= "let detail of resumeData.experience">
+                                        <p style="font-size: 0.8em; margin-top: -9px;">{{detail.jobDurationStart}} - {{detail.jobDurationEnd}}</p>
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td style="padding-top: 15px;">
+                                        <h3>Apple Inc.</h3>
+                                        <p>Senior Interface Designer</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet, illum magni sunt atque dignissimos.</p>
+                                    </td>
+                                    <td>
+                                        <p style="font-size: 0.8em;">2005-2007</p>
+                                    </td>
+                                </tr> -->
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="education" >
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1">
+                            <p style="font-weight:600;"><em>Education</em></p>
+                        </td>
+                        <td style="padding:20px 10px; border-bottom: 1px solid #d1d1d1" *ngFor= "let edu of resumeData.education">
+                            <h3>{{edu.instituteName}}</h3>
+                            <p>{{edu.degreeName}} - <strong>{{edu.cgpa}}</strong></p>
+                        </td>
+                    </tr>
+                    <tr class="footer-line">
+                        <td></td>
+                        <td>
+                            <p>{{resumeData.fullName}} - <span><a style="color:#ff0000;font-weight: 900;" href="mailto:{{resumeData.email}}">{{resumeData.email}}</a></span> - {{resumeData.phoneNumber}}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+

@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path:'', children :[
       {
-        path : 'parentChildCommunication', component : ParentComponent} 
+        path : 'parent-child', component : ParentComponent} 
     ]
   }
 ]

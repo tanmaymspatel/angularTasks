@@ -3,59 +3,72 @@
         <h3 classs="sidebarHeading">Angular Tasks</h3>
     </div>
     <nav class="sidebarContent">
-        <ul>
-            <li class="navItem"><a routerLink="/form">
-                    <span class="icon icon-form"></span>
-                    <span class="naVName">Form</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="data-binding/onewayBinding">
-                    <span class="icon icon-one-way"></span>
-                    <span class="naVName"> One Way</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="data-binding/twowayBinding">
-                    <span class="icon icon-two-way"></span>
-                    <span class="naVName">Two Way</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="/parentChildCommunication">
-                    <span class="icon icon-group"></span>
-                    <span class="naVName">parent child</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="/structuratDirectives">
-                    <span class="icon icon-pipe"></span>
-                    <span class="naVName">structural/ pipes</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="/attributrDirectives">
-                    <span class="icon icon-attribute"></span>
-                    <span class="naVName">Attribute/ pipes</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="/list">
-                    <span class="icon icon-list"></span>
-                    <span class="naVName">User List</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="/resume-form">
-                    <span class="icon icon-resume"></span>
-                    <span class="naVName">Resume Form</span>
-                </a>
-            </li>
-            <li class="navItem"><a routerLink="/assessment">
-                    <span class="icon icon-assessment"></span>
-                    <span class="naVName">Assessment</span>
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li class="navItem"><a routerLink="a">
-                <span class="icon icon-log-out"></span>
-                <span>Log Out</span>
-            </a>
-        </li>
-        </ul>
+        <div class="userInfo displayFlex">
+            <div class="userImage">
+                <figure>
+                    <img src="assets/images/user-avatar.svg" alt="Tanmay Patel">
+                </figure>
+            </div>
+            <div class="userDetails">
+                    <h3 class="userName">Tanmay Patel</h3>
+                    <a class="userEmail" href="mailto:tanmay.1rivet@gmail.com">tanmay.1rivet@gmail.com</a>
+            </div>
+        </div>
+        <div class="sideNav displayFlex">
+            <ul class="mainSideNav">
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="form">
+                        <span class="icon icon-form"></span>
+                        <span class="navName">Form</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="data-binding/onewayBinding">
+                        <span class="icon icon-one-way"></span>
+                        <span class="navName"> One Way</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="data-binding/twowayBinding">
+                        <span class="icon icon-two-way"></span>
+                        <span class="navName">Two Way</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="parentChild/parent-child">
+                        <span class="icon icon-group"></span>
+                        <span class="navName">parent child</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="directive/structural">
+                        <span class="icon icon-pipe"></span>
+                        <span class="navName">structural/ pipes</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="directive/attribute">
+                        <span class="icon icon-attribute"></span>
+                        <span class="navName">Attribute/ pipes</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="list">
+                        <span class="icon icon-list"></span>
+                        <span class="navName">User List</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="resume-form">
+                        <span class="icon icon-resume"></span>
+                        <span class="navName">Resume Form</span>
+                    </a>
+                </li>
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="assessment">
+                        <span class="icon icon-assessment"></span>
+                        <span class="navName">Assessment</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sideNavLogout">
+                <li class="navItem" routerLinkActive="active-link"><a routerLink="logout">
+                        <span class="icon icon-log-out"></span>
+                        <span>Log Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </aside>

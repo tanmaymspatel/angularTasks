@@ -3,6 +3,9 @@
     justify-content: space-around;
     padding: 80px 50px;
 }
-.ngIfAndSwitch{
+.ngIfAndSwitch {
     flex-basis: 300px;
+    // display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

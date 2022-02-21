@@ -1,22 +1,24 @@
-<h2 class="oneWayHeading">One Way Data binding</h2>
+<div class="oneWayComponent">
+    <h2 class="oneWayHeading">One Way Data binding</h2>
 
-<!-- Interpolation -->
-<div class="oneWayDataBinding">
-    <div class="interpolation">
-        <h2>Interpolation</h2>
-        <h3>Hello! My name is {{name}}</h3>
-    </div>
-    <div class="propertyBinding">
-        <h2>property binding</h2>
-        <h3 [innerHtml]='"My name is " + name'></h3>
-        <div>
-            <label for="firstName"></label>
-            <input type="text" name="firstName" id="firstName" [value]="name">
+    <!-- Interpolation -->
+    <div class="oneWayDataBinding">
+        <div class="interpolation">
+            <h2 class="bindingHeading">Interpolation</h2>
+            <h3>Hello! My name is {{name}}</h3>
         </div>
-    </div>
-    <div class="eventBinding">
-        <h2>Event binding</h2>
+        <div class="propertyBinding">
+            <h2 class="bindingHeading">property binding</h2>
+            <h3 [innerHtml]='"My name is " + name'></h3>
+            <div>
+                <label for="firstName"></label>
+                <input type="text" name="firstName" id="firstName" [value]="name">
+            </div>
+        </div>
+        <div class="eventBinding">
+            <h2 class="bindingHeading">Event binding</h2>
 
-        Event Binding : <button (click)="myFunction()">Click me</button>
+            Event Binding : <button (click)="myFunction()">Click me</button>
+        </div>
     </div>
 </div>

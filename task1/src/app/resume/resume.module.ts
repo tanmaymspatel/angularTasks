@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeComponent } from './resume.component';
-import { ResumeFormComponent } from './resume-form/resume-form.component';
-import { ResumeViewComponent } from './resume-view/resume-view.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResumeFormComponent } from './component/resume-form/resume-form.component';
+import { ResumeViewComponent } from './component/resume-view/resume-view.component';
 
 
 @NgModule({

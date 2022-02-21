@@ -13,7 +13,7 @@ export class ChildComponent implements OnInit {
   notify : EventEmitter<string> = new EventEmitter();
 
   passData(){
-    this.notify.emit("Messege From Child!")
+    this.notify.emit("Messege From Child!");
   }
   constructor() { }
 

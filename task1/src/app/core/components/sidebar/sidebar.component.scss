@@ -5,7 +5,8 @@
     height: 100%;
     flex-direction: column;
     display: flex;
-
+    position: relative;
+    overflow: hidden;
 }
 
 .sideHeader {
@@ -15,20 +16,41 @@
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
-    
+    position: absolute;    
+}
+
+.userInfo {
+    flex-basis: 100px;
+}
+
+.userImage{
+    figure{
+        img{
+            width:50px;
+            height: 50px;
+        }
+    }
+}
+
+.userDetails{
+    flex-direction: column;
+    position: absolute;
+    left: 3rem;
 }
 
 .sidebarContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.sidebarContent ul{
-    list-style: none;
-    padding: 0 1rem;
+.sideNav{
+    flex-direction: column;
+    height: 100%;
+    padding: 0 1.5rem;
+    justify-content: space-between;
 }
 
 
@@ -45,17 +67,17 @@
     margin: 0 5px;
     cursor: pointer;
 }
-.sidebarContent  li {
-    margin: 0.8rem 0;
-    padding: 0.5rem 0.2rem;
-    background-color: #eaedfc;
-    border-radius: 10px;
-    transition: 0.4S all;
-}
+// .sidebarContent  li {
+//     // margin: 0.8rem 0;
+//     // padding: 0.5rem 0.2rem;
+//     // background-color: #eaedfc;
+//     // border-radius: 10px;
+//     // transition: 0.4S all;
+// }
 
-#mainSidebar  li:hover{
-background-color: #eaedfc6b;
-}
+// #mainSidebar  li:hover{
+// background-color: #eaedfc6b;
+// }
 
 
 .icon{
@@ -65,4 +87,20 @@ background-color: #eaedfc6b;
 .navItem a{
     height: 25px;
     white-space: nowrap;
+    height: 25px;
+    white-space: nowrap;
+    margin: 0.8rem 0;
+    padding: 1.2rem 0.2rem;
+    background-color: #eaedfc;
+    border-radius: 10px;
+    transition: 0.4S all;
+    width: 12rem;
+    &:hover{
+        background-color: #eaedfc7a;
+    }
+}
+
+
+.active-link{
+    background-color: transparent;
 }

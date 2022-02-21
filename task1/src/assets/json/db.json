@@ -65,49 +65,36 @@
   ],
   "resume": [
     {
-      "fullName": "Tanmay Patel",
-      "designation": "Web Developer",
-      "email": "tanmay@gmail.com",
-      "phoneNumber": "8128569394",
-      "profile": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facere voluptatem a veniam quos, consequuntur sint corporis laudantium dignissimos totam?",
+      "fullName": "Abhishekl",
+      "designation": "",
+      "email": "",
+      "phoneNumber": "",
+      "profile": "",
       "technicalSkills": [
         {
-          "techSkillName": "Html"
-        },
-        {
-          "techSkillName": "Css"
-        },
-        {
-          "techSkillName": "Js"
+          "techSkillName": ""
         }
       ],
       "experience": [
         {
-          "CompanyName": "ABC IT Company",
-          "jobPosition": "Web Develper",
-          "jobDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet, illum magni sunt atque dignissimos.",
-          "jobDurationStart": 2019,
-          "jobDurationEnd": 2020
-        },
-        {
-          "CompanyName": "XYZ IT Company",
-          "jobPosition": "Web Develper",
-          "jobDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet, illum magni sunt atque dignissimos.",
-          "jobDurationStart": 2020,
-          "jobDurationEnd": 2021
+          "CompanyName": "",
+          "jobPosition": "",
+          "jobDescription": "",
+          "jobDurationStart": null,
+          "jobDurationEnd": null
         }
       ],
       "education": [
         {
-          "instituteName": "Indiana University",
-          "degreeName": "Dual Major",
-          "cgpa": "4.0 GPA"
+          "instituteName": "",
+          "degreeName": "",
+          "cgpa": null
         }
       ],
       "id": 1
     },
     {
-      "fullName": "",
+      "fullName": "John Doecsdcsdc",
       "designation": "",
       "email": "",
       "phoneNumber": "",
@@ -136,7 +123,7 @@
       "id": 2
     },
     {
-      "fullName": "",
+      "fullName": "Tanmay Patel",
       "designation": "",
       "email": "",
       "phoneNumber": "",
@@ -163,64 +150,6 @@
         }
       ],
       "id": 3
-    },
-    {
-      "fullName": "",
-      "designation": "",
-      "email": "",
-      "phoneNumber": "",
-      "profile": "",
-      "technicalSkills": [
-        {
-          "techSkillName": ""
-        }
-      ],
-      "experience": [
-        {
-          "CompanyName": "",
-          "jobPosition": "",
-          "jobDescription": "",
-          "jobDurationStart": null,
-          "jobDurationEnd": null
-        }
-      ],
-      "education": [
-        {
-          "instituteName": "",
-          "degreeName": "",
-          "cgpa": null
-        }
-      ],
-      "id": 4
-    },
-    {
-      "fullName": "",
-      "designation": "",
-      "email": "",
-      "phoneNumber": "",
-      "profile": "",
-      "technicalSkills": [
-        {
-          "techSkillName": ""
-        }
-      ],
-      "experience": [
-        {
-          "CompanyName": "",
-          "jobPosition": "",
-          "jobDescription": "",
-          "jobDurationStart": null,
-          "jobDurationEnd": null
-        }
-      ],
-      "education": [
-        {
-          "instituteName": "",
-          "degreeName": "",
-          "cgpa": null
-        }
-      ],
-      "id": 5
     }
   ],
   "office": [

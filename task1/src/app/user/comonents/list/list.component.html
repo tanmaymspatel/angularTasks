@@ -5,7 +5,7 @@
         <!-- <span class="icon-search"></span> -->
     </div>
     <div class="buttonArea">
-        <button routerLink="add">Add</button>
+        <button class="button addButton" routerLink="add">Add</button>
     </div>
 </div>
 
@@ -33,8 +33,8 @@
                 <td>{{user.gender}}</td>
                 <td>{{user.department | categoryPipe:categories}}</td>
                 <td>{{user.dateOfEmployement }}</td>
-                <td><button (click)="editClick(user.id)">Edit</button></td>
-                <td><button (click)="deleteClick(user.id)">Delete</button></td>
+                <td><button class="button editButton" (click)="editClick(user.id)">Edit</button></td>
+                <td><button class="button deleteButton" (click)="deleteClick(user.id)">Delete</button></td>
             </tr>
 
         </tbody>

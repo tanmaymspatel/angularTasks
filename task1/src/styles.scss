@@ -40,13 +40,22 @@ table{
 button, #hamburgerIcon, a, #closeIcon {
     cursor: pointer;
 }
+li{
+    list-style: none;
+}
+
 
 // toggle sidebar
+
+.navName{
+    position:absolute;
+    left: 3.5rem;
+}
 .homeSidebar{
     transition:ease-in-out 0.6s;
 }
 .homeSidebar .icon + span, .homeSidebar .sideHeader h3, .homeSidebar .icon, #closeIcon, #hamburgerIcon{
-    transition:ease-in-out 0.3s;
+    transition:ease-in-out 0.5s;
     opacity:1;
 }
 .homeSidebar .icon + span{
@@ -70,11 +79,15 @@ button, #hamburgerIcon, a, #closeIcon {
 }
 #hamburger:checked ~ .homeSidebar .icon + span, #hamburger:checked ~ .homeSidebar .sideHeader h3 {
     opacity: 0;
-    display: none;
+    // display: none;
+    transform: translateX(250px);
 }
 
 #hamburger:checked ~ .homeSidebar .icon{
     font-size: 1.3rem;
+}
+#hamburger:checked ~ .homeSidebar .navItem a{
+    width: 2.5rem;
 }
 #hamburger:checked ~ label #hamburgerIcon{
     display: none;
