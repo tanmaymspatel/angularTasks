@@ -1,0 +1,53 @@
+<div class="structuralDirective">
+    <div class="ngIfAndSwitch">
+        <div class="ngifDirective">
+            <h3>NGIF DIRECTIVE</h3>
+            <input type="radio" name="rdio1" (click)="changeValue(true)"> True
+            <input type="radio" name="rdio1" (click)="changeValue(false)"> False
+            <div *ngIf="isValid">
+                clicked on true
+            </div>
+            <div *ngIf="!isValid">
+                clicked on false
+            </div>
+        </div>
+        <div class="ngSwitch">
+            <h3>NGSWITCH DIRECTIVE</h3>
+            <div>
+                <div>
+                    <select (change)="getValue($event)">
+                        <option value="Noodles">Noodles</option>
+                        <option value="Vadapav">Vadapav</option>
+                        <option value="Pavbhaji">Pavbhaji</option>
+                    </select>
+                </div>
+                <div [ngSwitch]="selectedItem">
+                    <h4 *ngSwitchCase="'Noodles'">You have selected Noodles</h4>
+                    <h4 *ngSwitchCase="'Vadapav'">You have selected Vadapav</h4>
+                    <h4 *ngSwitchCase="'Pavbhaji'">You have selected Pavbhaji</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ngForDirective">
+        <h3>NGFOR DIRECTIVE</h3>
+        <table style="width: 500px; text-align: center;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = " let data of listData; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{data.Name}}</td>
+                    <td>{{data.Product}}</td>
+                    <td>{{data.Price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

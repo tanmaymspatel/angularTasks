@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Category } from 'src/app/shared/model/model';
+import { Category } from 'src/app/user/model/model';
 
 @Pipe({
   name: 'categoryPipe'

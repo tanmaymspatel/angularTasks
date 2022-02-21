@@ -4,8 +4,8 @@ import { DatePipe } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
-import { ListComponent } from './list/list.component';
-import { FormComponent } from './form/form.component';
+import { ListComponent } from './comonents/list/list.component';
+import { FormComponent } from './comonents/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { CategoryPipePipe } from './pipes/category-pipe.pipe';
