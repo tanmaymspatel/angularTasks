@@ -6,7 +6,7 @@ import { DataBindingComponent } from './data-binding.component';
 
 const routes: Routes = [
   {
-    path:'', children :[
+    path:'', component:DataBindingComponent, children :[
       {
         path : 'onewayBinding' , component : OneWayBindingComponent,
       },

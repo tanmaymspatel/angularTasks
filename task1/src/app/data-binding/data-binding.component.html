@@ -1,1 +1,16 @@
-<p>data-binding works!</p>
+<div class="dataBinding">
+    <div class="dataBindingHeader displayFlex">
+        <h3 class="dataHeading flexGrow1">Data Binding</h3>
+        <nav class="dataBindNav">
+            <ul class="displayFlex">
+                <li>
+                    <a  class="navLink" routerLink="onewayBinding" routerLinkActive="activeLink"> One Way</a>
+                </li>
+                <li>
+                    <a  class="navLink" routerLink="twowayBinding" routerLinkActive="activeLink"> Two Way</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+</div>

@@ -106,16 +106,41 @@ li {
 // --------responsive----------------------------------------------------------------
 
 @media only screen and (max-width: 1200px) {
-    // resume form
-    .resumeformcomponent {
-        width: 700px;
-    }
+    
 }
 @media only screen and (max-width: 992px) {
 }
 // tablet
 @media only screen and (max-width: 768px) {
+    .homeSidebar {
+        position: absolute;
+        left: -250px;
+        background: #fff;
+    }
+    #hamburger:checked ~ .homeSidebar {
+        width: 250px;
+        left: 0;
+    }
+    #hamburger:checked ~ .homeSidebar .sidebarHeading, #hamburger:checked ~ .homeSidebar .userDetails, #hamburger:checked ~ .homeSidebar .navName {
+        transform: translateX(0px);
+    }
+    #hamburger:checked ~ .homeSidebar .userInfo, #hamburger:checked ~ .homeSidebar .sideNav{
+        margin: auto 1rem;
+    }
+    #hamburger:checked ~ .homeSidebar .navItem a {
+        width: 13rem;
+    }
 }
 // mobile
 @media only screen and (max-width: 576px) {
+    .homeSidebar {
+        left: -100%;
+       
+    }
+    #hamburger:checked ~ .homeSidebar{
+        width: 100%;
+    }
+    #hamburger:checked ~ .homeSidebar .navItem a {
+        width: 18rem;
+    }
 }

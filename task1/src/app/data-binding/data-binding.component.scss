@@ -1,0 +1,27 @@
+.dataBinding {
+    width: 90%;
+    margin: auto;
+}
+.dataBindingHeader {
+    margin-bottom: 5rem;
+}
+.dataBindNav {
+    flex-basis: 250px;
+    ul{
+        justify-content: space-around;
+        li{
+            display: flex;
+        }
+    }
+    .navLink{
+        padding: 0.5rem 1rem;
+        &.activeLink{
+            background-color: #eaedfc;
+            border-radius: 10px;
+            transition: 0.5s ease-in-out;
+        }
+        &:hover{
+            background-color: #eaedfc7a;
+        }
+    }
+}

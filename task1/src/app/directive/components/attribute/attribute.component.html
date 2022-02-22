@@ -1,11 +1,10 @@
 <div class="attributeDirectiveComponent">
-    <div class="container">
-        <h2 [ngStyle]="{'color':'blue'}">Attribute Directives with pipes</h2>
-        <table style="width: 1000px; text-align: left;">
+        <h2 class="attributeHeading" [ngStyle]="{'color':'blue'}">Attribute Directives with pipes</h2>
+        <table class="attributeTable">
             <thead>
                 <tr>
                     <th>id</th>
-                    <th style="width:100px" [ngClass]="'colorRed'">Name</th>
+                    <th [ngClass]="'colorRed'">Name</th>
                     <th>Product</th>
                     <th>Price</th>
                     <th>Description</th>
@@ -21,5 +20,4 @@
                 </tr>
             </tbody>
         </table>
-    </div>
 </div>
