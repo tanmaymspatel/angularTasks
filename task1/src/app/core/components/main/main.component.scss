@@ -4,13 +4,13 @@ fieldset {
 input, textarea, select{
     width: 100%;
 }
-.mainContent {
-    display: flex;
-    justify-content: space-around;
-}
+// .mainContent {
+//     display: flex;
+// }
 .registrationForm {
-    margin-left: 100px;
-}
-.svgSection{
-    margin-left: 15rem;
+    width: 700px;
+    margin: auto;
+    form{
+        width:100%;
+    }
 }

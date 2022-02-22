@@ -1,41 +1,41 @@
 // general class
 
-
 #mainSidebar {
     height: 100%;
     flex-direction: column;
     display: flex;
-    position: relative;
     overflow: hidden;
 }
 
 .sideHeader {
     flex-basis: 60px;
 }
-#mainSidebar h3{
-    text-align: center;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    position: absolute;    
+.sidebarHeading {
+    padding-left: 4rem;
+    white-space: nowrap;
 }
 
 .userInfo {
     flex-basis: 100px;
+    align-items: center;
+    margin: auto;
 }
 
-.userImage{
-    figure{
-        img{
-            width:50px;
-            height: 50px;
+.userImage {
+    figure {
+        background-color: #d5cfcf;
+        padding: 0.2rem;
+        border-radius: 50%;
+        img {
+            width: 40px;
+            height: 40px;
         }
     }
 }
 
-.userDetails{
+.userDetails {
     flex-direction: column;
-    position: absolute;
-    left: 3rem;
+    padding-left: 0.5rem;
 }
 
 .sidebarContent {
@@ -46,61 +46,41 @@
     overflow-x: hidden;
 }
 
-.sideNav{
+.sideNav {
     flex-direction: column;
     height: 100%;
-    padding: 0 1.5rem;
-    justify-content: space-between;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
 }
 
-
-.sidebarContent  a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.sidebarContent  a span {
-    margin: 0 5px;
-    cursor: pointer;
-}
-// .sidebarContent  li {
-//     // margin: 0.8rem 0;
-//     // padding: 0.5rem 0.2rem;
-//     // background-color: #eaedfc;
-//     // border-radius: 10px;
-//     // transition: 0.4S all;
+// .sidebarContent  a span {
+//     margin: 0 5px;
 // }
 
-// #mainSidebar  li:hover{
-// background-color: #eaedfc6b;
-// }
-
-
-.icon{
+.icon {
     font-size: 0.9rem;
 }
 
-.navItem a{
+.navItem a {
+    display: flex;
+    align-items: center;
     height: 25px;
-    white-space: nowrap;
-    height: 25px;
+    color: black;
+    font-size: 1.2rem;
     white-space: nowrap;
     margin: 0.8rem 0;
     padding: 1.2rem 0.2rem;
-    background-color: #eaedfc;
+    background-color: transparent;
     border-radius: 10px;
-    transition: 0.4S all;
+    transition: 0.4s all;
     width: 12rem;
-    &:hover{
+    &:hover {
         background-color: #eaedfc7a;
     }
-}
-
-
-.active-link{
-    background-color: transparent;
+    &.active-link {
+        background-color: #eaedfc;
+    }
+    span {
+        margin: 0 5px;
+    }
 }

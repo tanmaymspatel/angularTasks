@@ -1,11 +1,11 @@
-
+.mainTask{
+    overflow: hidden;
+}
 .mainContent {
     display: flex;
 }
 // 
-.homeSidebar {
-    flex: 0 0 250px;
-}
+
 .homeMainContent {
     flex-grow: 1;
     overflow: auto;

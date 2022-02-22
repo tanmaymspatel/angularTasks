@@ -33,7 +33,7 @@
         font-size: 1.1rem;
     }
 }
-#clientName {
+#clientName, #office {
     padding: 0.5rem 0.8rem;
 }
 #search {
@@ -87,21 +87,21 @@ form input {
 // user list css
 .userList {
     margin: 5rem 0 0;
-}
-.userDataList {
-    width: 95%;
-    padding: 1rem;
-    text-align: left;
-    background-color: white;
-    margin: 0 auto;
-    border: 1px solid #f6f7f9;
-    border-radius: 10px;
-    td,
-    tr {
-        border-top: 4px solid #f6f7f9;
+    overflow: auto;
+    .userDataList {
+        width: 95%;
+        padding: 1rem;
+        text-align: left;
+        background-color: white;
+        margin: 0 auto;
+        border: 1px solid #f6f7f9;
+        border-radius: 10px;
+        td,
+        tr {
+            border-top: 4px solid #f6f7f9;
+        }
     }
 }
-
 .userList thead th {
     padding: 0.85rem 0;
     padding-left: 1rem;
@@ -126,4 +126,22 @@ form input {
 .deleteBtn {
     background-color: #c82333;
     border-color: #c82333;
+}
+
+
+
+
+
+
+
+
+
+// responsive -----------------------------------
+
+
+@media only screen and (max-width: 1200px) {
+    // resume form
+    .resumeformcomponent {
+        width: 700px;
+    }
 }

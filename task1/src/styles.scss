@@ -12,7 +12,7 @@ body,
     height: 100%;
     width: 100%;
 }
-table{
+table {
     overflow: auto;
 }
 .row {
@@ -37,61 +37,85 @@ table{
 .displayBlock {
     display: block;
 }
-button, #hamburgerIcon, a, #closeIcon {
+a {
+    text-decoration: none;
+    color: black;
+}
+button,
+#hamburgerIcon,
+a,
+#closeIcon {
     cursor: pointer;
 }
-li{
+li {
     list-style: none;
 }
 
+.homeSidebar {
+    width: 250px;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+//chexkbox toggle
 
 // toggle sidebar
-
-.navName{
-    position:absolute;
-    left: 3.5rem;
+#hamburger:checked ~ .homeSidebar {
+    width: 70px;
 }
-.homeSidebar{
-    transition:ease-in-out 0.6s;
-}
-.homeSidebar .icon + span, .homeSidebar .sideHeader h3, .homeSidebar .icon, #closeIcon, #hamburgerIcon{
-    transition:ease-in-out 0.5s;
-    opacity:1;
-}
-.homeSidebar .icon + span{
-    display: inline;
+#hamburger:checked ~ .homeSidebar .userInfo {
+    width: 50px;
 }
 
-#hamburger, #closeIcon{
+#hamburger:checked ~ .homeSidebar .sidebarHeading,
+#hamburger:checked ~ .homeSidebar .userDetails,
+#hamburger:checked ~ .homeSidebar .navName {
+    transform: translateX(250px);
+}
+#hamburger,
+#closeIcon {
     display: none;
 }
-#hamburgerIcon, #closeIcon {
+#hamburger:checked ~ label #closeIcon {
+    left: 20px;
+}
+
+#hamburgerIcon,
+#closeIcon {
     position: absolute;
     top: 17px;
     left: 30px;
-    transition:ease-in-out 0.6s;
+    transition: ease-in-out 0.3s;
     font-size: 1.5rem;
     z-index: 1001;
 }
-#hamburger:checked ~ .homeSidebar {
-    flex: 0 0 85px;
-    // transform: translateX(-150px);
-}
-#hamburger:checked ~ .homeSidebar .icon + span, #hamburger:checked ~ .homeSidebar .sideHeader h3 {
-    opacity: 0;
-    // display: none;
-    transform: translateX(250px);
-}
 
-#hamburger:checked ~ .homeSidebar .icon{
+#hamburger:checked ~ .homeSidebar .icon {
     font-size: 1.3rem;
 }
-#hamburger:checked ~ .homeSidebar .navItem a{
+#hamburger:checked ~ .homeSidebar .navItem a {
     width: 2.5rem;
 }
-#hamburger:checked ~ label #hamburgerIcon{
+#hamburger:checked ~ label #hamburgerIcon {
     display: none;
 }
-#hamburger:checked ~ label #closeIcon{
+#hamburger:checked ~ label #closeIcon {
     display: block;
+}
+
+// --------responsive----------------------------------------------------------------
+
+@media only screen and (max-width: 1200px) {
+    // resume form
+    .resumeformcomponent {
+        width: 700px;
+    }
+}
+@media only screen and (max-width: 992px) {
+}
+// tablet
+@media only screen and (max-width: 768px) {
+}
+// mobile
+@media only screen and (max-width: 576px) {
 }
