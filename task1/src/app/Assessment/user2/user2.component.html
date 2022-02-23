@@ -1,19 +1,14 @@
 <div class="userPage">
     <!-- start: top bar -->
     <div class="userTopBar displayFlex">
-        <div class="flexGrow1">
-            <h2 class="userHeading">Users</h2>
-        </div>
+        <h2 class="userHeading">Users</h2>
         <div class="userSearch">
             <label for="clients">Clients </label>
-            <select id="clientName" name="clientName" formControlName="clientName"
-                            placeholder="Client Name*">
-                            <option value="All" selected>All</option>
-                            <option *ngFor="let client of clientNameList" [value]="client.id">{{client.name}}</option>
-                        </select>
-            <input type="search" name="search" id="search" 
-            placeholder="Search Here" [(ngModel)]="nameSearch"> 
-            <button class="searchBtn">Search</button>
+            <select id="clientName" name="clientName" formControlName="clientName" placeholder="Client Name*">
+                <option value="All" selected>All</option>
+                <option *ngFor="let client of clientNameList" [value]="client.id">{{client.name}}</option>
+            </select>
+            <input type="search" name="search" id="search" placeholder="Search Here" [(ngModel)]="nameSearch">
         </div>
         <div class="newUserBtn">
             <button class="button blueButton" (click)='clickNewUser()'>+ NEW USER</button>

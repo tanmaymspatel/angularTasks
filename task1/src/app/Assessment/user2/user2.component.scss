@@ -1,9 +1,18 @@
-.userSearch {
-    flex-basis: 450px;
+.userTopBar{
+    flex-wrap: wrap;
+    width: 100%;
+    .userHeading{
+        width:63%
+    }
+    .userSearch {
+        flex-basis: 20%;
+    }
+    .newUserBtn {
+        flex-basis: 15%;
+    }
 }
-.newUserBtn {
-    flex-basis: 250px;
-}
+
+
 .formBtn,
 .button {
     border-radius: 10px;
@@ -34,14 +43,11 @@
     }
 }
 #clientName, #office {
-    padding: 0.5rem 0.8rem;
+    padding: 0.3rem 0.8rem;
 }
 #search {
     padding: 0.5rem 0.2rem;
     margin-left: 0.2rem;
-}
-.searchBtn {
-    padding: 0.5rem;
 }
 .formLabel {
     display: none;
@@ -139,9 +145,3 @@ form input {
 // responsive -----------------------------------
 
 
-@media only screen and (max-width: 1200px) {
-    // resume form
-    .resumeformcomponent {
-        width: 700px;
-    }
-}
