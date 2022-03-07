@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { CategoryPipePipe } from './pipes/category-pipe.pipe';
 
+import { PortalModule } from '@angular/cdk/portal';
+import { OverlayModule } from '@angular/cdk/overlay';
+
 
 @NgModule({
   declarations: [
@@ -24,8 +27,10 @@ import { CategoryPipePipe } from './pipes/category-pipe.pipe';
     CommonModule,
     UserRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    OverlayModule,
+    PortalModule
   ],
-  providers: [DatePipe],
+  providers: [],
 })
 export class UserModule { }

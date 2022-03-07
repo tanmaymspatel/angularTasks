@@ -3,6 +3,10 @@ import { Category, user } from 'src/app/user/model/model';
 import { ProductService } from '../../services/product.service';
 import { Router, Routes } from '@angular/router';
 
+
+import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
+import { ComponentPortal } from '@angular/cdk/portal';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -13,9 +17,10 @@ export class ListComponent implements OnInit {
   users: user[] =[];
   categories: Category[];
   nameSearch : any = "";
+  overlayRef : OverlayRef;
 
 
-  constructor(private productService: ProductService, private router : Router) { }
+  constructor(private productService: ProductService, private router : Router, private overlay: Overlay) { }
 
   ngOnInit(): void {
       this.getUsers();
@@ -49,4 +54,10 @@ export class ListComponent implements OnInit {
       alert("something wen wrong")
     });
   }
+
+  openOverlay(){
+
+  }
+
+
 }
