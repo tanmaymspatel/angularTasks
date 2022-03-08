@@ -5,7 +5,7 @@
         <!-- <span class="icon-search"></span> -->
     </div>
     <div class="buttonArea">
-        <button class="button addButton" (click)="openOverlay()" routerLink="add">Add</button>
+        <button class="button addButton" (click)="openOverlay(id)" >Add</button>
     </div>
 </div>
 
@@ -33,7 +33,7 @@
                 <td>{{user.gender}}</td>
                 <td>{{user.department | categoryPipe:categories}}</td>
                 <td>{{user.dateOfEmployement }}</td>
-                <td><button class="button editButton" (click)="editClick(user.id)">Edit</button></td>
+                <td><button class="button editButton" (click)="openOverlay(user.id)">Edit</button></td>
                 <td><button class="button deleteButton" (click)="deleteClick(user.id)">Delete</button></td>
             </tr>
 

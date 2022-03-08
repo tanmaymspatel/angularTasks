@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Category, user } from 'src/app/user/model/model';
@@ -14,6 +14,7 @@ export class FormComponent implements OnInit {
 
   categoryOptions!: Category[];
   userToEdit!: number;
+  @Output() closeForm : EventEmitter<any>= new EventEmitter<any>();
 
   userForm = {} as FormGroup;
   constructor(private fb: FormBuilder, private productService: ProductService, private router: Router, private activatedRoute: ActivatedRoute) { }
@@ -21,10 +22,10 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.userForm = this.buildUserForm();
     this.getCategoryOptions();
-    this.userToEdit = this.activatedRoute.snapshot.params['id'];
-    if (this.userToEdit) {
-      this.productService.getUserById(this.userToEdit).subscribe(user => this.userForm.patchValue(user));
-    }
+    // this.userToEdit = this.activatedRoute.snapshot.params['id'];
+    // if (this.userToEdit) {
+    //   this.productService.getUserById(this.userToEdit).subscribe(user => this.userForm.patchValue(user));
+    // }
   }
   buildUserForm(): FormGroup {
     return this.fb.group({
@@ -37,9 +38,14 @@ export class FormComponent implements OnInit {
       dateOfEmployement: [null]
     })
   }
-  resetForm() {
-    this.userForm.reset();
+  patchValue(id:number){
+    return this.productService.getUserById(id).subscribe(res=>{
+      this.userForm.patchValue(res);
+    })
   }
+  // resetForm() {
+  //   this.userForm.reset();
+  // }
   saveData() {
     if (this.userToEdit) {
       this.productService.editUser({ id: this.userToEdit, ...this.userForm.value }).subscribe(res => {
@@ -47,6 +53,7 @@ export class FormComponent implements OnInit {
       }, (error) => {
         alert('data not save');
       })
+      this.closeForm.emit();
     } else {
       console.log(this.userForm)
       this.productService.saveUser(this.userForm.value).subscribe(res => {
@@ -54,8 +61,9 @@ export class FormComponent implements OnInit {
       }, (error) => {
         alert('data not save');
       })
+       this.closeForm.emit();
     }
-    this.router.navigateByUrl('/list')
+    // this.router.navigateByUrl('/list')
   }
 
 
@@ -66,6 +74,9 @@ export class FormComponent implements OnInit {
     }, (error: Category[]) => {
       alert("Somethings Went Wrong");
     });
+  }
+  onclose(){
+    this.closeForm.emit();
   }
 }
 

@@ -1,10 +1,9 @@
 <div class="userform">
-    <form [formGroup]="userForm" (ngSubmit)="saveData()">
+    <form [formGroup]="userForm">
         <div class="firstName formRow">
             <label for="firstName">First Name: </label>
             <input type="text" name="firstName" formControlName="firstName" id="firstName"
                 placeholder="Enter First Name">
-            
         </div>
         <div class="lastName formRow">
             <label for="lastName">Last Name: </label>
@@ -42,13 +41,9 @@
             <input type="date" name="dateOfEmployement" formControlName="dateOfEmployement" id="dateOfEmployement">
         </div>
         <div class="submitButton">
-            <button class="btn" type="submit">Submit</button>
-            <button type="button" class="btn" (click)="resetForm()">Reset</button>
+            <button class="btn btn-submit" type="submit" (click)="saveData()">Submit</button>
+            <button type="button" class="btn btn-close" (click)="onclose()">close</button>
         </div>
     </form>
-    <div class="BackToList">
-        <button routerLink="/list">Back To List</button>
-    </div>
 </div>
-
 

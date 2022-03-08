@@ -1,0 +1,23 @@
+.modal-card{
+    padding: 1rem;
+    height: 200px;
+    width: 400px;
+    border-radius: 0.25rem;
+    background-color: azure;
+    color: black;
+}
+.modal-btn{
+    margin-top: 1rem;
+    .button {
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        &.button-primary {
+            background-color: #4CAF50;
+        }
+        &.button-cancel {
+            background-color: #f44336;
+        }
+    }
+}

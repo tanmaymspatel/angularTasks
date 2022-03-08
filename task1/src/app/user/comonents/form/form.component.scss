@@ -1,11 +1,27 @@
 .userform {
     width: 500px;
     margin: 0 auto;
+    height: 100%;
+    background: white;
 }
 .formRow {
     margin: 1.2rem 0;
 }
 form {
     padding: 1.5rem;
-    border: 1px solid black;
+    
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    &.btn-submit {
+        background-color: #4CAF50;
+    }
+    &.btn-close {
+        background-color: #f44336;
+    }
+
 }
