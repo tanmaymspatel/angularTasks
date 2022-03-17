@@ -34,6 +34,7 @@ const routes: Routes = [
     path: 'dynamic-template',
     loadChildren: () => import('./dynamictemplating/dynamictemplating.module').then(m => m.DynamictemplatingModule)
   },
+  { path: 'subject', loadChildren: () => import('./subject/subject.module').then(m => m.SubjectModule) },
   {
   path:'**', component : PagenotfoundComponent 
   }

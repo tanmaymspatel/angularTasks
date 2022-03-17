@@ -1,0 +1,48 @@
+.userSearch {
+    label {
+        font-size: 1.1rem;
+    }
+}
+#clientName, #office {
+    padding: 0.3rem 0.8rem;
+}
+#search {
+    padding: 0.5rem 0.2rem;
+    margin-left: 0.2rem;
+}
+.formLabel {
+    display: none;
+}
+.userForm {
+    form {
+        padding: 1rem;
+        margin: 0.5rem;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+}
+
+form input {
+    padding: 0.2rem 5rem 0.2rem 1rem;
+}
+
+.formFields {
+    .row1 {
+        margin: 1rem 0;
+        justify-content: space-between;
+        .formElement {
+            width: 22%;
+        }
+    }
+    .row2 {
+        margin: 1rem 0;
+        .formElement {
+            width: 48%;
+        }
+    }
+}
+
+.formBtns {
+    justify-content: flex-end;
+    padding-top: 5rem;
+}

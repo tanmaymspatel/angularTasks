@@ -1,0 +1,86 @@
+<div class="userForm">
+    <form [formGroup]="userForm">
+        <div class="formFields">
+            <div class="row1 row">
+                <!-- start : first name -->
+                <div class="formElement">
+                    <label class="formLabel" for="firstName">First Name: </label>
+                    <input type="text" name="firstName" formControlName="firstName" id="firstName"
+                        placeholder="First Name*">
+                    <!-- <div
+                        *ngIf="userForm.get('firstName')?.touched && userForm.get('firstName')?.errors?.['required']">
+                        <small class="error-text">This Field is required </small>
+                    </div> -->
+                </div>
+                <!-- end : first name -->
+                <!-- start : last name -->
+                <div class="formElement">
+                    <label class="formLabel" for="lastName">Last Name: </label>
+                    <input type="text" name="lastName" formControlName="lastName" id="lastName"
+                        placeholder="Last Name*">
+                    <!-- <div
+                        *ngIf="userForm.get('lastName')?.touched && userForm.get('lastName')?.errors?.['required']">
+                        <small class="error-text">This Field is required </small>
+                    </div> -->
+                </div>
+                <!-- end : last name -->
+                <!-- start : email -->
+                <div class="formElement">
+                    <label class="formLabel" for="email">Enter Email: </label>
+                    <input type="email" name="email" formControlName="email" id="email" placeholder="Email*">
+                    <!-- <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['required']">
+                        <small class="error-text">This Field is required </small>
+                    </div> -->
+                </div>
+                <!-- end : email -->
+                <!-- start : contact number -->
+                <div class="formElement">
+                    <label class="formLabel" for="primaryContactNumber">Primary Contact Number: </label>
+                    <input type="tel" name="primaryContactNumber" formControlName="primaryContactNumber"
+                        id="primaryContactNumber" placeholder="Primary Contact Number*">
+                    <!-- <div
+                        *ngIf="userForm.get('primaryContactNumber')?.touched && userForm.get('primaryContactNumber')?.errors?.['required']">
+                        <small class="error-text">This Field is required </small>
+                    </div> -->
+                </div>
+                <!-- end : contact number -->
+            </div>
+            <div class="row2 row justifyContentCenter">
+                <!--  start : client name -->
+                <div class="formElement">
+                    <label class="formLabel" for="clientName">Client Name: </label>
+                    <select id="clientName" name="clientName" formControlName="clientName"
+                        placeholder="Client Name*">
+                        <option [value]="0" disabled>Client Name*</option>
+                        <option value="Front-End">Front-End</option>
+                        <option value="Back-End">Back-End</option>
+                        <option value="Tester">Tester</option>
+                    </select>
+                    <!-- <div
+                        *ngIf="userForm.get('clientName')?.touched && userForm.get('clientName')?.errors?.['required']">
+                        <small class="error-text">This Field is required </small>
+                    </div> -->
+                </div>
+                <!-- end : client name -->
+                <!-- start : office name -->
+                <div class="formElement">
+                    <label class="formLabel" for="office">Office: </label>
+                    <select id="office" name="office" formControlName="office" placeholder="Office*">
+                        <option [value]="0" disabled selected>Office*</option>
+                        <option value="Office1">Office1</option>
+                        <option value="Office2">Office2</option>
+                        <option value="Office2">Office2</option>
+                    </select>
+                    <!-- <div *ngIf="userForm.get('office')?.touched && userForm.get('office')?.errors?.['required']">
+                        <small class="error-text">This Field is required </small>
+                    </div> -->
+                </div>
+                <!-- end : office name -->
+            </div>
+        </div>
+        <div class="formBtns row">
+            <button class="button blueButton" (click)="saveData()">SAVE</button>
+            <button class="button cancelButton" >CANCEL</button>
+        </div>
+    </form>
+</div>
