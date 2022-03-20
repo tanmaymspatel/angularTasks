@@ -12,5 +12,18 @@
                 <th colspan="2">ACTIONS</th>
             </tr>
         </thead>
+        <tbody>
+            <tr *ngFor = "let data of listData ; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{data.firstName}}</td>
+                <td>{{data.lastName}}</td>
+                <td>{{data.clientName}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.primaryContactNumber}}</td>
+                <td><button (click)="editData(i+1)">Edit</button></td>
+                <td><button (click)="deleteData(i+1)">Delete</button></td>
+            </tr>
+        </tbody>
     </table>
 </div>

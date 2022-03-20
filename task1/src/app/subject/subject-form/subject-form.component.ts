@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { SubjectData } from '../model/subject.model';
+import { SubjectService } from '../services/subject.service';
+
 
 @Component({
   selector: 'app-subject-form',
@@ -10,7 +11,7 @@ import { SubjectData } from '../model/subject.model';
 export class SubjectFormComponent implements OnInit {
 
   userForm: FormGroup;
-  constructor() { }
+  constructor(private _subjectService : SubjectService) { }
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
@@ -25,5 +26,7 @@ export class SubjectFormComponent implements OnInit {
 
   saveData(){
     console.log(this.userForm.value);
+    this._subjectService.userData.next(this.userForm.value);
+
   }
 }
