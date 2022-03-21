@@ -4,7 +4,7 @@
         <h2 class="userHeading">Users</h2>
         <div class="userSearch">
             <label for="clients">Clients </label>
-            <select id="clientName" name="clientName" formControlName="clientName" placeholder="Client Name*">
+            <select id="clientName" name="clientName" placeholder="Client Name*">
                 <option value="All" selected>All</option>
                 <option *ngFor="let client of clientNameList" [value]="client.id">{{client.name}}</option>
             </select>

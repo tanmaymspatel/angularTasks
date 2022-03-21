@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SubjectService } from '../services/subject.service';
 
 
@@ -11,22 +11,32 @@ import { SubjectService } from '../services/subject.service';
 export class SubjectFormComponent implements OnInit {
 
   userForm: FormGroup;
-  constructor(private _subjectService : SubjectService) { }
+  constructor(private fb: FormBuilder, private _subjectService : SubjectService) { }
 
   ngOnInit(): void {
-    this.userForm = new FormGroup({
-      firstName: new FormControl('', Validators.required),
-      lastName: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      primaryContactNumber: new FormControl('', Validators.required),
-      clientName: new FormControl('', Validators.required),
-      office: new FormControl('', Validators.required),
-    });
+    this.userForm = this.CreatForm();
+    this._subjectService.editData.subscribe(res => {
+      this.userForm.patchValue(res);
+    })
+  }
+
+  public CreatForm() : FormGroup{
+    return this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      primaryContactNumber: ['', Validators.required],
+      clientName: ['', Validators.required],
+      office: ['', Validators.required]
+    })
   }
 
   saveData(){
     console.log(this.userForm.value);
     this._subjectService.userData.next(this.userForm.value);
-
+    this.userForm.reset();
+  }
+  onCancel(){
+    this.userForm.reset();
   }
 }
