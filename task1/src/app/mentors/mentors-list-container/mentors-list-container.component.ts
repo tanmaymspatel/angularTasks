@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Mentors } from '../mentors.model';
+import { MentorsService } from '../mentors.service';
 
 @Component({
   selector: 'app-mentors-list-container',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MentorsListContainerComponent implements OnInit {
 
-  constructor() { }
+  public mentorList$ : Observable<Mentors[]>
+
+  constructor(private _service:MentorsService) { 
+
+    this.mentorList$ = new Observable();
+
+  }
 
   ngOnInit(): void {
+    this.mentorList$ = this._service.getMentorsData();
+  }
+
+  deleteMentor(id: number){
+    this._service.deleteMentors(id).subscribe(res=>{
+      alert(`Mentor having id ${id} is deleted`);  
+      this.mentorList$ = this._service.getMentorsData();  
+    })
   }
 
 }

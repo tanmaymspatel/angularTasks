@@ -7,6 +7,7 @@ import { MentorsFormContainerComponent } from './mentors-form-container/mentors-
 import { MentorsListContainerComponent } from './mentors-list-container/mentors-list-container.component';
 import { MentorsFormPresentationComponent } from './mentors-form-container/mentors-form-presentation/mentors-form-presentation.component';
 import { MentorsListPresentationComponent } from './mentors-list-container/mentors-list-presentation/mentors-list-presentation.component';
+import { MentorsService } from './mentors.service';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MentorsListPresentationComponent } from './mentors-list-container/mento
   imports: [
     CommonModule,
     MentorsRoutingModule
-  ]
+  ],
+  providers:[MentorsService]
 })
 export class MentorsModule { }

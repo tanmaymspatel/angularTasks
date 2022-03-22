@@ -1,1 +1,35 @@
-<p>mentors-list-presentation works!</p>
+
+<h2>List of Mentors</h2>
+<!-- start : form addition section -->
+<button class="btn add-form-btn" routerLink="../add">+ Add</button>
+<!-- end : form addition section -->
+
+<!-- start : list section -->
+
+<!-- strat: Mentor list table -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mentor Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of mentorList">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.gender}}</td>
+            <td><button class="btn btn-edit">Edit</button></td>
+            <td><button class="btn btn-delete" (click)="onDelete(data.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<!-- strat: Mentor list table -->
+
+<!-- end : list section -->
+
+
