@@ -51,16 +51,6 @@
       "department": "4",
       "dateOfEmployement": "2022-02-25",
       "id": 3
-    },
-    {
-      "firstName": "Sushil",
-      "lastName": "Modi",
-      "email": "sample@gmail.com",
-      "phoneNumber": "9825707023",
-      "gender": "Male",
-      "department": "3",
-      "dateOfEmployement": "2020-06-09",
-      "id": 4
     }
   ],
   "resume": [
@@ -150,6 +140,35 @@
         }
       ],
       "id": 3
+    },
+    {
+      "fullName": "John Doesssdfferfref",
+      "designation": "aa",
+      "email": "sample@gmail.com",
+      "phoneNumber": "fhf",
+      "profile": "aaa",
+      "technicalSkills": [
+        {
+          "techSkillName": "rthrh"
+        }
+      ],
+      "experience": [
+        {
+          "CompanyName": "yjntyghr",
+          "jobPosition": "fgh",
+          "jobDescription": "htyj",
+          "jobDurationStart": null,
+          "jobDurationEnd": 2
+        }
+      ],
+      "education": [
+        {
+          "instituteName": "gfgh",
+          "degreeName": "uyj",
+          "cgpa": "jnghjty"
+        }
+      ],
+      "id": 4
     }
   ],
   "office": [
@@ -195,7 +214,7 @@
       "email": "shusi@gmail.com",
       "primaryContactNumber": "9898989898",
       "clientName": "2",
-      "office": "5",
+      "office": "1",
       "id": 2
     },
     {
@@ -275,20 +294,44 @@
     {
       "name": "Pratik",
       "age": "24",
-      "gender": "Male",
+      "gender": "male",
       "id": 1
     },
     {
-      "id": 2,
-      "name": "Hiren",
+      "name": "Hirenaaaa",
       "age": "23",
-      "gender": "Male"
+      "gender": "Male",
+      "id": 2
     },
     {
       "id": 3,
       "name": "Harshiv",
       "age": "23",
       "gender": "Male"
+    },
+    {
+      "name": "Viralaa",
+      "age": "25",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "name": "Tanmayaaa",
+      "age": "25",
+      "gender": "male",
+      "id": 6
+    },
+    {
+      "name": "shraddha",
+      "age": "25",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "name": "hemuu",
+      "age": "25",
+      "gender": "female",
+      "id": 8
     }
   ]
 }

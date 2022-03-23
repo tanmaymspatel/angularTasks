@@ -22,6 +22,7 @@ export class MentorsListContainerComponent implements OnInit {
     this.mentorList$ = this._service.getMentorsData();
   }
 
+  // delete member service call 
   deleteMentor(id: number){
     this._service.deleteMentors(id).subscribe(res=>{
       alert(`Mentor having id ${id} is deleted`);  

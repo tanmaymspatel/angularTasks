@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Mentors } from '../../model/mentors.model';
 import { MentorsListPresenterService } from '../mentors-list-presenter/mentors-list-presenter.service';
 
@@ -27,7 +28,7 @@ export class MentorsListPresentationComponent implements OnInit {
 
   private _mentorslist : Mentors[];
 
-  constructor(private _service:MentorsListPresenterService) {
+  constructor(private _service:MentorsListPresenterService, private _router:Router) {
 
     this.deleteMentor = new EventEmitter<number>();
    }
@@ -46,4 +47,10 @@ export class MentorsListPresentationComponent implements OnInit {
     // console.log(id);
     this._service.onDelete(id);
   }
+
+  // onEdit(id:number){
+  //   // console.log(id);
+  //   this._router.navigateByUrl(`mentors/edit/${id}`);
+  // }
+
 }

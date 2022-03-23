@@ -1,0 +1,28 @@
+.form-title {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.mentors-form {
+    width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 0 10px 3px #2f56e142;
+}
+.form-row {
+    padding: 0.75rem 0;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border: none;
+    font-size: 0.85rem;
+    border-radius: 10px;
+}
+.btn-submit {
+    background-color: #2f56e1;
+}
+.btn-cancel {
+    background-color: #f44336;
+    margin-left: 0.5rem;
+}

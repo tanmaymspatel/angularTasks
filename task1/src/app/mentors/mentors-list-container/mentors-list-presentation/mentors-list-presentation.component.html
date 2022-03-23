@@ -23,7 +23,7 @@
             <td>{{data.name}}</td>
             <td>{{data.age}}</td>
             <td>{{data.gender}}</td>
-            <td><button class="btn btn-edit">Edit</button></td>
+            <td><button class="btn btn-edit" routerLink="/mvp/edit/{{data.id}}">Edit</button></td>
             <td><button class="btn btn-delete" (click)="onDelete(data.id)">Delete</button></td>
         </tr>
     </tbody>
