@@ -39,10 +39,18 @@ export class MentorsListPresentationComponent implements OnInit {
 
     this._service.delete$.subscribe(res=>{
       // console.log(res);
-      
       this.deleteMentor.emit(res);
     })
 
+      this._service.filterData$.subscribe(res=>{
+        let filterData = this._mentorslist.filter(data=>{
+          return data.city.toLowerCase() == res.city.toLowerCase();
+        })
+        console.log(filterData);
+        
+      });
+      
+      
   }
 
   onDelete(id:number){

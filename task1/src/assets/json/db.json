@@ -295,11 +295,31 @@
       "name": "Tanmay",
       "age": "25",
       "gender": "male",
-      "company": "!rivet",
+      "company": "1rivet",
       "department": "Frontend",
       "city": "Surat",
       "maritalStatus": "unmarried",
       "id": 1
+    },
+    {
+      "name": "Viral",
+      "age": "26",
+      "gender": "male",
+      "company": "1rivet",
+      "department": "Frontend",
+      "city": "Valsad",
+      "maritalStatus": "unmarried",
+      "id": 2
+    },
+    {
+      "name": "Rushabh",
+      "age": "25",
+      "gender": "male",
+      "company": "Google",
+      "department": ".net",
+      "city": "Surat",
+      "maritalStatus": "married",
+      "id": 3
     }
   ]
 }
