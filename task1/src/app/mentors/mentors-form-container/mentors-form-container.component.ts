@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
-import { Mentors, MentorsForm } from '../mentors.model';
+
 import { MentorsService } from '../mentors.service';
+import { Mentors, MentorsForm } from '../model/mentors.model';
 
 @Component({
   selector: 'app-mentors-form-container',

@@ -22,7 +22,11 @@ export class MentorsFormPresenterService {
     return this._fb.group({
       name:['',[Validators.required]],
       age:['',[Validators.required]],
-      gender:['',Validators.required]
+      gender:['',Validators.required],
+      company:['',Validators.required],
+      department:['',Validators.required],
+      city:['',Validators.required],
+      maritalStatus:['',Validators.required]
     })
   }
 

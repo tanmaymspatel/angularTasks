@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DatePipe } from '@angular/common';
+
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
@@ -26,10 +26,10 @@ import { OverlayModule } from '@angular/cdk/overlay';
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
     OverlayModule,
-    PortalModule
+    PortalModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
 })

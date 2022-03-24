@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category, user } from 'src/app/user/model/model';
 import { ProductService } from '../../services/product.service';
-import { Router, Routes } from '@angular/router';
+import { Router} from '@angular/router';
 
 
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';

@@ -9,6 +9,8 @@ import { MentorsFormPresentationComponent } from './mentors-form-container/mento
 import { MentorsListPresentationComponent } from './mentors-list-container/mentors-list-presentation/mentors-list-presentation.component';
 import { MentorsService } from './mentors.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MentorlistFilterPresentationComponent } from './mentors-list-container/mentors-list-presentation/mentorlist-filter-presentation/mentorlist-filter-presentation.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -17,13 +19,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     MentorsFormContainerComponent,
     MentorsListContainerComponent,
     MentorsFormPresentationComponent,
-    MentorsListPresentationComponent
+    MentorsListPresentationComponent,
+    MentorlistFilterPresentationComponent
   ],
 
   imports: [
     CommonModule,
     MentorsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OverlayModule
   ],
   providers:[MentorsService]
 })

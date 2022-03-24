@@ -1,8 +1,8 @@
 import { Location } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { MentorsForm } from '../../mentors.model';
-import { Mentors } from '../../model/mentors.model';
+
+import { Mentors, MentorsForm } from '../../model/mentors.model';
 import { MentorsFormPresenterService } from '../mentors-form-presenter/mentors-form-presenter.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class MentorsFormPresentationComponent implements OnInit {
   @Input() public set mentorsData(value: Mentors | null) {
     // console.log(value);
     if (value) {
-      this.formTitle = "Edit Customer";
+      this.formTitle = "Edit Mentor";
       this.mentorsForm.patchValue(value);
       this._mentorsData = value;
     }
@@ -28,8 +28,6 @@ export class MentorsFormPresentationComponent implements OnInit {
   public get mentorsData(): Mentors | null {
     return this._mentorsData;
   }
-
-
 
   @Output() public addMentor: EventEmitter<MentorsForm>;
   @Output() public editMentor: EventEmitter<MentorsForm>;
@@ -46,13 +44,13 @@ export class MentorsFormPresentationComponent implements OnInit {
     // initialize the addMentor property
     this.addMentor = new EventEmitter<MentorsForm>();
     this.editMentor = new EventEmitter<MentorsForm>();
-    this.formTitle = 'Add Customer'
+    this.formTitle = 'Add Mentor'
   }
 
   ngOnInit(): void {
     // subscribe value of mentor data
     this._mentorsFormService.mentorsFormData$.subscribe(res => {
-      if (this.formTitle === "Add Customer") {
+      if (this.formTitle === "Add Mentor") {
         this.addMentor.emit(res);
       } else {
         this.editMentor.emit(res);

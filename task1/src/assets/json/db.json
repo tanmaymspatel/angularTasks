@@ -292,46 +292,14 @@
   ],
   "mentors": [
     {
-      "name": "Pratik",
-      "age": "24",
+      "name": "Tanmay",
+      "age": "25",
       "gender": "male",
+      "company": "!rivet",
+      "department": "Frontend",
+      "city": "Surat",
+      "maritalStatus": "unmarried",
       "id": 1
-    },
-    {
-      "name": "Hirenaaaa",
-      "age": "23",
-      "gender": "Male",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "Harshiv",
-      "age": "23",
-      "gender": "Male"
-    },
-    {
-      "name": "Viralaa",
-      "age": "25",
-      "gender": "male",
-      "id": 5
-    },
-    {
-      "name": "Tanmayaaa",
-      "age": "25",
-      "gender": "male",
-      "id": 6
-    },
-    {
-      "name": "shraddha",
-      "age": "25",
-      "gender": "female",
-      "id": 7
-    },
-    {
-      "name": "hemuu",
-      "age": "25",
-      "gender": "female",
-      "id": 8
     }
   ]
 }

@@ -1,7 +1,10 @@
 
 <h2>List of Mentors</h2>
 <!-- start : form addition section -->
-<button class="btn add-form-btn" routerLink="../add">+ Add</button>
+<div class="actions">
+    <button class="btn add-form-btn" routerLink="../add">+ Add</button>
+    <button class="btn add-form-btn" (click)="filterOverlay()">Filter</button>
+</div>
 <!-- end : form addition section -->
 
 <!-- start : list section -->
@@ -14,7 +17,11 @@
             <th>Name</th>
             <th>Age</th>
             <th>Gender</th>
-            <th colspan="2">Action</th>
+            <th>Company</th>
+            <th>Department</th>
+            <th>City</th>
+            <th>Marital Status</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +30,12 @@
             <td>{{data.name}}</td>
             <td>{{data.age}}</td>
             <td>{{data.gender}}</td>
-            <td><button class="btn btn-edit" routerLink="/mvp/edit/{{data.id}}">Edit</button></td>
-            <td><button class="btn btn-delete" (click)="onDelete(data.id)">Delete</button></td>
+            <td>{{data.company}}</td>
+            <td>{{data.department}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.maritalStatus}}</td>
+            <td><button class="btn btn-edit" routerLink="/mvp/edit/{{data.id}}">Edit</button>
+            <button class="btn btn-delete" (click)="onDelete(data.id)">Delete</button></td>
         </tr>
     </tbody>
 </table>

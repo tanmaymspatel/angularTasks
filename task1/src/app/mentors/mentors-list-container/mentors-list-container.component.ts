@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Mentors } from '../mentors.model';
+
 import { MentorsService } from '../mentors.service';
+import { Mentors } from '../model/mentors.model';
 
 @Component({
   selector: 'app-mentors-list-container',

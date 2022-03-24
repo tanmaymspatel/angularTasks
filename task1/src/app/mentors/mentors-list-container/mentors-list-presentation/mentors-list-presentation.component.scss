@@ -1,12 +1,17 @@
-.add-form-btn {
-    margin: 2rem 0;
-    background-color: #2f6bff;
+.actions{
+    display: flex;
+    justify-content: space-between;
+    .add-form-btn {
+        margin: 2rem 0;
+        background-color: #2f6bff;
+    }
 }
 
 .table {
     width: 100%;
-    padding: 0 15rem;
+    padding: 0 5rem;
     border-collapse: collapse;
+    text-align: left;
     thead {
         background-color: black;
         color: white;
@@ -34,5 +39,6 @@
 }
 .btn-delete{
     background-color: #f44336;
+    margin-left: 0.5rem;
 }
 

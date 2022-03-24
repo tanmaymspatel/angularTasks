@@ -1,0 +1,29 @@
+<div class="filter-form">
+    <h2>Filter Data</h2>
+    <form [formGroup]="filterForm" >
+        <div class="form-row">
+            <label for="name" class="form-label">Enter Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <div class="form-row">
+            <label for="city" class="form-label">Enter city</label>
+            <input type="text" class="form-control" id="city" formControlName="city">
+        </div>
+        <div class="form-row">
+            <div>
+                <label>Select Your Gender</label>
+            </div>
+            <div>
+                <input type="radio" class="form-control" id="male" value="male" formControlName="gender">
+                <label for="male" class="form-label">Male</label>
+            </div>
+            <div>
+                <input type="radio" class="form-control" id="female" value="female" formControlName="gender">
+                <label for="female" class="form-label">Female</label>
+            </div>
+        </div>
+        
+        <button class="btn btn-cancel" (click)="closeOverlay()">Cancel</button>
+        <button class="btn btn-filter">Filter</button>
+    </form>
+</div>

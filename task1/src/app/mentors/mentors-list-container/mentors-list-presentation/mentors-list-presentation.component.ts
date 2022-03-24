@@ -25,12 +25,14 @@ export class MentorsListPresentationComponent implements OnInit {
   }
 
   @Output() deleteMentor : EventEmitter<number>;
+  @Output() closeOverlay : EventEmitter<any>;
 
   private _mentorslist : Mentors[];
 
   constructor(private _service:MentorsListPresenterService, private _router:Router) {
 
     this.deleteMentor = new EventEmitter<number>();
+    this.closeOverlay = new EventEmitter<any>();
    }
 
   ngOnInit(): void {
@@ -48,9 +50,10 @@ export class MentorsListPresentationComponent implements OnInit {
     this._service.onDelete(id);
   }
 
-  // onEdit(id:number){
-  //   // console.log(id);
-  //   this._router.navigateByUrl(`mentors/edit/${id}`);
-  // }
+  filterOverlay(){
+    this._service.openFilter();
+  }
+
+  
 
 }
