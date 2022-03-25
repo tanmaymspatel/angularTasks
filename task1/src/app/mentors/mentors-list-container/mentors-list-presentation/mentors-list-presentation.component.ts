@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Mentors } from '../../model/mentors.model';
 import { MentorsListPresenterService } from '../mentors-list-presenter/mentors-list-presenter.service';
@@ -27,9 +27,9 @@ export class MentorsListPresentationComponent implements OnInit {
   @Output() deleteMentor : EventEmitter<number>;
   @Output() closeOverlay : EventEmitter<any>;
 
-  private _mentorslist : Mentors[];
+  public _mentorslist : Mentors[];
 
-  constructor(private _service:MentorsListPresenterService, private _router:Router) {
+  constructor(private _service:MentorsListPresenterService, private _router:Router, private _cdr : ChangeDetectorRef) {
 
     this.deleteMentor = new EventEmitter<number>();
     this.closeOverlay = new EventEmitter<any>();
@@ -42,11 +42,9 @@ export class MentorsListPresentationComponent implements OnInit {
       this.deleteMentor.emit(res);
     })
 
-      this._service.filterData$.subscribe(res=>{
-        let filterData = this._mentorslist.filter(data=>{
-          return data.city.toLowerCase() == res.city.toLowerCase();
-        })
-        console.log(filterData);
+      this._service.filterData$.subscribe(res=>{  
+        this._mentorslist = res;
+        this._cdr.detectChanges();
         
       });
       
@@ -59,7 +57,7 @@ export class MentorsListPresentationComponent implements OnInit {
   }
 
   filterOverlay(){
-    this._service.openFilter();
+    this._service.openFilter(this._mentorslist);
   }
 
   
