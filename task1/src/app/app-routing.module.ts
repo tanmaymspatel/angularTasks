@@ -39,6 +39,7 @@ const routes: Routes = [
     loadChildren: () => import('./mentors/mentors.module').then(m => m.MentorsModule)
   },
   { path: 'subject', loadChildren: () => import('./subject/subject.module').then(m => m.SubjectModule) },
+  { path: 'overlay', loadChildren: () => import('./overlay-practice/overlay-practice.module').then(m => m.OverlayPracticeModule) },
   {
   path:'**', component : PagenotfoundComponent 
   }
