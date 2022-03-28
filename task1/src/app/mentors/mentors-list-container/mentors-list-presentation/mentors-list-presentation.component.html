@@ -1,9 +1,13 @@
-
 <h2>List of Mentors</h2>
 <!-- start : form addition section -->
 <div class="actions">
     <button class="btn add-form-btn" routerLink="../add">+ Add</button>
-    <button class="btn add-form-btn" (click)="filterOverlay()">Filter</button>
+    <button  class="btn add-form-btn position-relative" (click)="filterOverlay()">
+        <span>
+            Filter
+        </span>
+        <span *ngIf="isFilterMode" class="filter-notification-icon position-absolute"></span>
+    </button>
 </div>
 <!-- end : form addition section -->
 
@@ -25,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of _mentorslist">
+        <tr *ngFor="let data of mentorList">
             <td>{{data.id}}</td>
             <td>{{data.name}}</td>
             <td>{{data.age}}</td>
@@ -35,12 +39,16 @@
             <td>{{data.city}}</td>
             <td>{{data.maritalStatus}}</td>
             <td><button class="btn btn-edit" routerLink="/mvp/edit/{{data.id}}">Edit</button>
-            <button class="btn btn-delete" (click)="onDelete(data.id)">Delete</button></td>
+                <button class="btn btn-delete" (click)="onDelete(data.id)">Delete</button>
+            </td>
         </tr>
     </tbody>
+    <tfoot>
+        <tr *ngIf="!mentorList?.length">
+            No Records Found!
+        </tr>
+    </tfoot>
 </table>
 <!-- strat: Mentor list table -->
 
 <!-- end : list section -->
-
-

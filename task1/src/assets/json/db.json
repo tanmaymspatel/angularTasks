@@ -320,6 +320,16 @@
       "city": "Surat",
       "maritalStatus": "married",
       "id": 3
+    },
+    {
+      "name": "Tanmaya",
+      "age": "25",
+      "gender": "male",
+      "company": "1rivet",
+      "department": "Frontend",
+      "city": "surat",
+      "maritalStatus": "unmarried",
+      "id": 4
     }
   ]
 }

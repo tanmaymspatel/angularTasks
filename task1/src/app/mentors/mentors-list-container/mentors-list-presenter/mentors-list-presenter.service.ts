@@ -61,6 +61,7 @@ export class MentorsListPresenterService {
         if (res[item]){
           filteredData = filteredData.filter((data:any)=>{
             return data[item].toString().toLowerCase() == res[item].toString().toLowerCase();
+            // return data[item].toString().toLowerCase().includes(res[item].toString().toLowerCase());
           })
         }
       })

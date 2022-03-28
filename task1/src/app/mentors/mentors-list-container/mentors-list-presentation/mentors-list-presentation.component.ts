@@ -15,7 +15,9 @@ export class MentorsListPresentationComponent implements OnInit {
 
   @Input() public set mentorList(value : Mentors[] | null){
     if (value){
-      // console.log(value)
+      if(!this._originalMentorsList){
+        this._originalMentorsList = value;
+      }
       this._mentorslist = value;
     }
   }
@@ -23,27 +25,30 @@ export class MentorsListPresentationComponent implements OnInit {
   public get mentorList() : Mentors[] | null{
     return this._mentorslist;
   }
+  public isFilterMode:boolean = false;
 
   @Output() deleteMentor : EventEmitter<number>;
-  @Output() closeOverlay : EventEmitter<any>;
+  // @Output() closeOverlay : EventEmitter<any>;
 
-  public _mentorslist : Mentors[];
+  private _mentorslist : Mentors[];
+  private _originalMentorsList : Mentors[];
 
-  constructor(private _service:MentorsListPresenterService, private _router:Router, private _cdr : ChangeDetectorRef) {
+  constructor(private _mentorListPresenterService:MentorsListPresenterService, private _cdr : ChangeDetectorRef) {
 
     this.deleteMentor = new EventEmitter<number>();
-    this.closeOverlay = new EventEmitter<any>();
+    // this.closeOverlay = new EventEmitter<any>();
    }
 
   ngOnInit(): void {
 
-    this._service.delete$.subscribe(res=>{
+    this._mentorListPresenterService.delete$.subscribe(res=>{
       // console.log(res);
       this.deleteMentor.emit(res);
     })
 
-      this._service.filterData$.subscribe(res=>{  
+      this._mentorListPresenterService.filterData$.subscribe(res=>{  
         this._mentorslist = res;
+        this.isFilterMode = true;
         this._cdr.detectChanges();
         
       });
@@ -53,11 +58,11 @@ export class MentorsListPresentationComponent implements OnInit {
 
   onDelete(id:number){
     // console.log(id);
-    this._service.onDelete(id);
+    this._mentorListPresenterService.onDelete(id);
   }
 
   filterOverlay(){
-    this._service.openFilter(this._mentorslist);
+    this._mentorListPresenterService.openFilter(this._originalMentorsList);
   }
 
   
