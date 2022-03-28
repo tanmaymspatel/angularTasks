@@ -27,7 +27,7 @@ export class MentorsService {
     return this._http.delete<number>(`${this.api}/mentors/${id}`);
    }
 
-  // get id of the member
+  // get mentor data from the id
    public getMemntorById(id: string): Observable<Mentors>{
      return this._http.get<Mentors>(`${this.api}/mentors/${id}`);
    }

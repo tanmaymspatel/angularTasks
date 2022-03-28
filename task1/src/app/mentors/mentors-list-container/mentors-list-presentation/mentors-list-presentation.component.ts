@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { Mentors } from '../../model/mentors.model';
 import { MentorsListPresenterService } from '../mentors-list-presenter/mentors-list-presenter.service';
 
