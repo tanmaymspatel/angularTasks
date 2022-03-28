@@ -38,7 +38,6 @@ export class MentorsListPresentationComponent implements OnInit {
   ngOnInit(): void {
 
     this._service.delete$.subscribe(res=>{
-      // console.log(res);
       this.deleteMentor.emit(res);
     })
 
